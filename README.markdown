@@ -27,7 +27,8 @@ Após executar o setup inicial de módulos com `git submodule update --init` dev
 
 Dentro da pasta powerline você pode executar `sudo python setup.py install`
 
-> O projeto Powerline pode ser instalado via gerenciado de pacotes Python PIP com o comando `pip install --user git+git://github.com/Lokaltog/powerline`
+> O projeto Powerline pode ser instalado via gerenciado de pacotes Python PIP com o comando
+> `pip install --user git+git://github.com/Lokaltog/powerline`
 
 #### Linux
 

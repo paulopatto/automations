@@ -2,20 +2,22 @@
 
 Meus arquivos de configurações para ambiente de desenvolvimento \*nix.
 
+## Setup Inicial
 
-## Configurações de
+Para usar meus arquivos de configuração você deve clonar o projeto com o comando git clone:
 
-- TMUX
-- GIT
-- VIM
-- VMs (Docker, Vagrant)
-- Tecnologias (Ruby, Python, NodeJS, Go-lang)
+`git clone https://github.com/paulopatto/dotfiles.git ~/.dotfiles && cd ~/.dotfiles`
 
+Depois de clonado o projeto faça o download das dependências e modulos com git.
+> Para isso você deve ter o git instalado em sua máquina.
+
+`git submodule update --init`
 
 
 ## Powerline
 
-O projeto [powerline](https://github.com/Lokaltog/powerline) é o plugin de linha de status para o editor VIM e o Terminal TMUX. Está adicionado como submodulo e é contido nas pastas `powerline` e  `powerline-fonts`. No momento que escrevo este documento a configuração do mesmo está contida neste link [https://powerline.readthedocs.org/en/latest/](https://powerline.readthedocs.org/en/latest/) porém é sempre bom acessar o repositório no [github](https://github.com/Lokaltog/powerline).
+O projeto [powerline](https://github.com/Lokaltog/powerline) é o plugin de linha de status para o editor VIM e o Multiplexador de terminal TMUX que uso.
+No momento que escrevo este documento a configuração do mesmo está contida neste link [https://powerline.readthedocs.org/en/latest/](https://powerline.readthedocs.org/en/latest/) porém é sempre bom acessar o repositório no [github](https://github.com/Lokaltog/powerline).
 
 ### Instalação
 

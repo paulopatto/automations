@@ -1,0 +1,6 @@
+[submodule "bundle/vundle"]
+	path = bundle/vundle
+	url = https://github.com/gmarik/vundle.git
+[submodule "snippets"]
+	path = snippets
+	url = https://github.com/asux/snipmate-snippets.git

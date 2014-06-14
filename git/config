@@ -9,6 +9,9 @@
 
 [push]
   default = simple
+
+[apply]
+  whitespace = fix
   
 [color]
   ui = auto

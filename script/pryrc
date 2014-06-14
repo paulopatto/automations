@@ -1,0 +1,10 @@
+# vim: ft=ruby
+
+# TODO: Create gist
+# TODO: Save file
+def vi
+  require 'tempfile'
+  @tempfile ||= Tempfile.new('irb-interactive')
+  system('vim', @tempfile.path)
+  Object.class_eval(File.read(@tempfile.path)) if $?.success?
+end

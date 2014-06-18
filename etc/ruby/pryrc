@@ -1,3 +1,4 @@
+# vim: ft=ruby
 # TODO: Create gist
 # TODO: Save file
 def vi
@@ -6,6 +7,3 @@ def vi
   system('vim', @tempfile.path)
   Object.class_eval(File.read(@tempfile.path)) if $?.success?
 end
-
-
-# vim: ft=ruby

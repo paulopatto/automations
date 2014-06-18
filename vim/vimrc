@@ -1,6 +1,79 @@
-let g:CSApprox_verbose_level = 0
-set nocompatible               " be iMproved
-filetype off    " required!
+" Install Vundle
+set nocompatible  " be iMproved
+filetype off      " required!
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin() " alternatively, pass a path where Vundle should install plugins call vundle#begin('~/some/path/here')
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList          - list configured plugins
+" :PluginInstall(!)    - install (update) plugins
+" :PluginSearch(!) foo - search (or refresh cache first) for foo
+" :PluginClean(!)      - confirm (or auto-approve) removal of unused plugins
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+"   Plugin 'tpope/vim-fugitive'
+" plugin from http://vim-scripts.org/vim/scripts.html
+"   Plugin 'L9'
+" Git plugin not hosted on GitHub
+"   Plugin 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+"   Plugin 'file:///home/gmarik/path/to/plugin'
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+"   Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+" Avoid a name conflict with L9
+"   Plugin 'user/L9', {'name': 'newL9'}
+"
+
+" PLUGINS
+Plugin 'gmarik/vundle'
+Plugin 'kien/ctrlp.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails.git'
+Plugin 'tpope/vim-ragtag'
+Plugin 'tpope/vim-endwise'
+Plugin 'scrooloose/nerdtree'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'stephenmckinney/vim-solarized-powerline'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/syntastic'
+Plugin 'docunext/closetag.vim'
+Plugin 'jg/bufexplorer'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'itspriddle/vim-jquery'
+Plugin 'hallison/vim-ruby-sinatra'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'vim-scripts/Conque-Shell'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'qstrahl/vim-matchmaker'
+Plugin 'Shougo/neocomplcache.vim'
+Plugin 'klen/python-mode'
+Plugin 'hynek/vim-python-pep8-indent'
+Plugin 'kevinw/pyflakes-vim'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'bling/vim-airline'
+Plugin 'rking/ag.vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'honza/vim-snippets'
+Plugin 'vim-scripts/Gundo'
+Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
+" End bundles
+
+call vundle#end()            " required
+filetype plugin indent on    " required
 
 set showcmd     "show incomplete cmds down the bottom
 set showmode    "show current mode down the bottom
@@ -392,63 +465,6 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-
-
-
-" Bundles
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails.git'
-Bundle 'tpope/vim-ragtag'
-Bundle 'tpope/vim-endwise'
-Bundle 'scrooloose/nerdtree'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'stephenmckinney/vim-solarized-powerline'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'scrooloose/syntastic'
-Bundle 'docunext/closetag.vim'
-Bundle 'jg/bufexplorer'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'mattn/gist-vim'
-Bundle 'mattn/webapi-vim'
-Bundle 'itspriddle/vim-jquery'
-Bundle 'hallison/vim-ruby-sinatra'
-"Bundle 'ervandew/supertab'
-"Bubdle 'chrisbra/NrrwRgn'
-"Bundle 'wakatime/vim-wakatime'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'vim-scripts/Conque-Shell'
-Bundle 'davidhalter/jedi-vim'
-Bundle 'qstrahl/vim-matchmaker'
-Bundle 'Shougo/neocomplcache.vim'
-Bundle 'klen/python-mode'
-Bundle 'hynek/vim-python-pep8-indent'
-Bundle 'kevinw/pyflakes-vim'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'bling/vim-airline'
-Bundle 'rking/ag.vim'
-Bundle 'garbas/vim-snipmate'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "honza/vim-snippets"
-Bundle 'vim-scripts/Gundo'
-" End bundles
-filetype plugin indent on     " required!
-"
-" Brief help
-" :BundleList          - list configured bundles
-" :BundleInstall(!)    - install(update) bundles
-" :BundleSearch(!) foo - search(or refresh cache first) for foo
-" :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed..
 "
 " For AirLine
 let g:airline_powerline_fonts = 1

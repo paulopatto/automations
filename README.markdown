@@ -2,6 +2,13 @@
 
 Meus arquivos de configurações para ambiente de desenvolvimento \*nix.
 
+
+
+## Install
+`sh -c "\`curl -fsSL https://raw.githubusercontent.com/paulopatto/dotfiles/master/install\`"`
+
+
+
 ## Download e Setup Inicial
 
 Para usar meus arquivos de configuração você deve clonar o projeto com o comando git clone:

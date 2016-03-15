@@ -34,26 +34,29 @@ call vundle#begin() " alternatively, pass a path where Vundle should install plu
 
 " PLUGINS
 Plugin 'gmarik/vundle'
+Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
+"Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
+Plugin 'godlygeek/csapprox' " Required by 'tpope/vim-fugitive' https://github.com/tpope/vim-fugitive/issues/705
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails.git'
 Plugin 'tpope/vim-ragtag'
 Plugin 'tpope/vim-endwise'
-Plugin 'scrooloose/nerdtree'
+Plugin 'ngmy/vim-rubocop'
 Plugin 'thoughtbot/vim-rspec'
-Plugin 'Lokaltog/vim-powerline'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 Plugin 'stephenmckinney/vim-solarized-powerline'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
 Plugin 'docunext/closetag.vim'
 Plugin 'jg/bufexplorer'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
 Plugin 'itspriddle/vim-jquery'
 Plugin 'hallison/vim-ruby-sinatra'
-Plugin 'scrooloose/nerdcommenter'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'vim-scripts/Conque-Shell'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'qstrahl/vim-matchmaker'
@@ -69,7 +72,8 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Gundo'
-Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
+Plugin 'danron/renamevim'
+
 " End bundles
 
 call vundle#end()            " required

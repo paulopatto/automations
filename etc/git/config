@@ -2,7 +2,7 @@
 # ~/.gitconfig
 [user]
   name  = Paulo Patto
-  email = paulopatto@gmail.com
+  email = paulopatto@paulopatto.com
 
 [github]
   user = paulopatto
@@ -36,3 +36,4 @@
 [alias]
   st = status -sb
   ci = commit -v
+  graph = "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative"

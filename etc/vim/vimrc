@@ -73,7 +73,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Gundo'
 Plugin 'danron/renamevim'
-
+Plugin 'kchmck/vim-coffee-script'
 " End bundles
 
 call vundle#end()            " required

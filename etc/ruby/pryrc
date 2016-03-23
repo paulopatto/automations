@@ -1,6 +1,4 @@
 # vim: ft=ruby
-# TODO: Create gist
-# TODO: Save file
 def vi
   require 'tempfile'
   @tempfile ||= Tempfile.new('irb-interactive')

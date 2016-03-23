@@ -27,7 +27,7 @@
   new  = green bold
 
 [core]
-  excludefile = $GITIGNORE
+  excludefile = $HOME/.gitignore_global
   editor      = vim
 
 [merge]
@@ -37,3 +37,5 @@
   st = status -sb
   ci = commit -v
   graph = "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative"
+  lg    = "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
+

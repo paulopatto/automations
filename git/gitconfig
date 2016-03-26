@@ -8,7 +8,7 @@
   user = paulopatto
 
 [push]
-  default = simple
+  default = current
 
 [apply]
   whitespace = fix

@@ -1,7 +1,7 @@
 " Install Vundle
 set nocompatible  " be iMproved
 filetype off      " required!
-set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=$HOME/.vim/bundle/vundle.vim
 call vundle#begin() " alternatively, pass a path where Vundle should install plugins call vundle#begin('~/some/path/here')
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -72,7 +72,7 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'honza/vim-snippets'
 Plugin 'vim-scripts/Gundo'
-Plugin 'danron/renamevim'
+Plugin 'danro/rename.vim'
 Plugin 'kchmck/vim-coffee-script'
 " End bundles
 

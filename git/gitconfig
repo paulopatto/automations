@@ -8,7 +8,7 @@
   user = paulopatto
 
 [push]
-  default = current
+  default = matching # simple | current | matching
 
 [apply]
   whitespace = fix

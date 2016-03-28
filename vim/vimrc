@@ -33,7 +33,6 @@ call vundle#begin() " alternatively, pass a path where Vundle should install plu
 "
 
 " PLUGINS
-Plugin 'gmarik/vundle'
 Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
 "Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/nerdtree'

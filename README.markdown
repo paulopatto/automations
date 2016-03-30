@@ -3,6 +3,11 @@
 Meus arquivos de configurações para ambiente de desenvolvimento \*nix.
 
 
+> mover o arquivo lxc/default.conf para:
+> ```sh
+> $HOME/.config/lxc/default.config
+> ```
+
 
 ## Install
 `sh -c "\`curl -fsSL https://raw.githubusercontent.com/paulopatto/dotfiles/master/install\`"`

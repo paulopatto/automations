@@ -74,6 +74,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'vim-scripts/Gundo'
 Plugin 'danro/rename.vim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'mustache/vim-mustache-handlebars'
 " End bundles
 
 call vundle#end()            " required

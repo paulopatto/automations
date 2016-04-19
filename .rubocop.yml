@@ -1,0 +1,11 @@
+Documentation:
+  Enabled: false
+AllCops:
+  Include:
+    - Rakefile
+    - config.ru
+  Exclude:
+    - db/**/*
+    - config/**/*
+    - script/**/*
+    - public/telas-html/**/*

@@ -75,6 +75,7 @@ Plugin 'vim-scripts/Gundo'
 Plugin 'danro/rename.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'wakatime/vim-wakatime'
 " End bundles
 
 call vundle#end()            " required

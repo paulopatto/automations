@@ -27,7 +27,7 @@
   new  = green bold
 
 [core]
-  excludefile = $HOME/.gitignore_global
+  excludefile = ~/.gitignore_global
   editor      = vim
 
 [grep]

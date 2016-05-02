@@ -1,8 +1,18 @@
 # vim: ft=gitconfig
 # ~/.gitconfig
 [user]
-  name  = Paulo Patto
-  email = paulopatto@paulopatto.com
+  #name  = Paulo Patto
+  #email = paulopatto@paulopatto.com
+
+# Usar esse se precisar substituir as chamadas 'git://' por 'https://'
+# [url "https://"]
+# 	insteadOf = git://
+
+[http]
+  # proxy =
+
+[url]
+# git config --global url.'https://'.insteadOf 'git://'
 
 [github]
   user = paulopatto
@@ -29,6 +39,7 @@
 [core]
   excludefile = ~/.gitignore_global
   editor      = vim
+	excludes = *.sqlite3
 
 [grep]
   linenumber = true

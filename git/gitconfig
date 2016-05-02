@@ -5,8 +5,8 @@
   email = paulopatto@paulopatto.com
 
 # Usar esse se precisar substituir as chamadas 'git://' por 'https://'
-# [url "https://"]
-# 	insteadOf = git://
+[url "https://"]
+	insteadOf = git://
 
 [http]
   # proxy =
@@ -37,9 +37,9 @@
   new  = green bold
 
 [core]
-  excludefile = ~/.gitignore_global
-  editor      = vim
-	excludes = *.sqlite3
+  excludesfile = ~/.gitignore_global
+  editor       = vim
+	excludes     = *.sqlite3
 
 [grep]
   linenumber = true

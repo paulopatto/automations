@@ -3,3 +3,4 @@
 .rvmrc.local
 *~
 .*.sw?
+*.sqlite3

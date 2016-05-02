@@ -1,8 +1,8 @@
 # vim: ft=gitconfig
 # ~/.gitconfig
 [user]
-  #name  = Paulo Patto
-  #email = paulopatto@paulopatto.com
+  name  = Paulo Patto
+  email = paulopatto@paulopatto.com
 
 # Usar esse se precisar substituir as chamadas 'git://' por 'https://'
 # [url "https://"]

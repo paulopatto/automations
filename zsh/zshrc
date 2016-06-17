@@ -112,3 +112,7 @@ alias ohmyzshconfig="$EDITOR $HOME/.oh-my-zsh"
 
 export NVM_DIR="/home/u101249/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+
+
+eval "$(rbenv init -)"

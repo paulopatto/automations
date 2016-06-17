@@ -1,9 +1,18 @@
+#!/bin/bash
 # vim: set ft=sh :
-# Automatically adds branch name to the end of every commit message.
-# Make a copy of .git/hooks/prepare-commit-msg.sample in your repo and
-# name the file prepare-commit-msg (remove "sample" extension).
-# Paste the following into the file, save the file, and try it out in bash
-# Copied by: http://www.tilcode.com/git-how-to-automatically-add-the-branch-name-to-the-end-of-every-commit-message/
 
-BRANCH_NAME=$(git branch | grep '*' | sed 's/* //')
-echo "[$BRANCH_NAME]: "$(cat "$1") > "$1"
+FILE=$1
+
+if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
+  BRANCH_NAME=${BASH_REMATCH[1]}
+  test "$branch" != master || branch=' '
+else
+  # Detached HEAD.  (branch=HEAD is a faster alternative.)
+  BRANCH_NAME="`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`"
+fi
+
+echo $1
+
+if [ -n "$BRANCH_NAME" ] && [ "$BRANCH_NAME" != "master" ]; then
+  sed -i -e '1s@^@['"$BRANCH_NAME"']: @' $FILE
+fi

@@ -1,0 +1,77 @@
+# Paulo Patto dotfiles - EM PROCESSO DE CONSTRUÇÃO.
+
+Meus arquivos de configurações para ambiente de desenvolvimento \*nix.
+
+
+> mover o arquivo lxc/default.conf para:
+> ```sh
+> $HOME/.config/lxc/default.config
+> ```
+
+
+## Install
+`sh -c "\`curl -fsSL https://raw.githubusercontent.com/paulopatto/dotfiles/master/install\`"`
+
+
+
+## Download e Setup Inicial
+
+Para usar meus arquivos de configuração você deve clonar o projeto com o comando git clone:
+
+`git clone https://github.com/paulopatto/dotfiles.git ~/.dotfiles && cd ~/.dotfiles`
+
+Depois de clonado o projeto faça o download das dependências e modulos com git.
+
+`git submodule update --init`
+
+
+## Chef *(em construção - nem sei se essa loucura é possivel)*
+O chef é um software usado para automatizar a configuração de servidores, porém podemos usar ele para automatizar o provisionamento de máquina virtuais com Docker e Vagrant além de sua própria máquina. Você pode consultar e aprender mais sobre o Chef no link de [Learn Chef](https://learnchef.opscode.com/)
+
+Faça o download e instalação do Chef com a linhas de comando abaixo:
+
+> Você vai precisar do [cURL](http://curl.haxx.se/) instalado em sua máquina, verifique o procedimento de instalação para sua plataforma caso esteja no Ubuntu ele pode ser obtido via apt-get com o comando `sudo apt-get install curl`
+
+`curl -L https://www.opscode.com/chef/install.sh | sudo bash`
+
+uma alternativa caso já tenha o ruby (*quero que você leia e **RHABÍ** para ficar chique*) instalado em sua máquina é usar o ruby gems para tal use esta outra linha de comando, o comando *sudo* está entre colchetes para o caso de você não estar usando rvm ou ter de usar permissões de administrador, se usas rbenv ou rvm o comando sudo talvez possa ser suprimido.
+
+`[sudo] gem install chef --no-document`
+
+## Powerline
+
+O projeto [powerline](https://github.com/Lokaltog/powerline) é o plugin de linha de status para o editor VIM e o Multiplexador de terminal TMUX que uso.
+No momento que escrevo este documento a configuração do mesmo está contida neste link [https://powerline.readthedocs.org/en/latest/](https://powerline.readthedocs.org/en/latest/) porém é sempre bom acessar o repositório no [github](https://github.com/Lokaltog/powerline).
+
+### Instalação
+
+> **Melhorar** pois deve usar um script instalador para Mac e Linux e não necessitar da intervenção.
+> - [Linux](https://powerline.readthedocs.org/en/latest/installation/linux.html#installation-linux)
+> - [Mac](https://powerline.readthedocs.org/en/latest/installation/osx.html#installation-osx)
+
+Após executar o setup inicial de módulos com `git submodule update --init` deve ser criadas as pastas `powerline` e `powerline-fonts` nas raiz do projeto ai você deve configurar de acordo com o seu sistema operacional.
+
+Dentro da pasta powerline você pode executar `sudo python setup.py install`
+
+> O projeto Powerline pode ser instalado via Python PIP com o comando `pip install --user git+git://github.com/Lokaltog/powerline`
+
+#### Linux
+
+1. Mova/Copie o arquivo de font `powerline/font/PowerlineSymbols.otf` para `~/.fonts` (*Não sei se caso eu criar um link simbólico já resolve*)
+2. Mova/Copie o arquivo de configuração de fonte do Powerline `powerline/font/10-powerline-symbols.conf` para `~/.fonts.conf.d/` ou `~/.config/fontconfig/conf.d/`, dependendo da sua versão do fontconfig
+3. Execute o [Fontconfig](http://en.wikipedia.org/wiki/Fontconfig) para criação do cache com o comando `fc-cache -vf ~/.fonts`. Para mais informações sobre o comando `fc-cache` consulte o manual do fontconfig, se não tiver o fontconfig instalado use a linha `sudo apt-get install -y fontconfig` no Ubuntu.
+4. Talvez seja necessário reiniciar o X-Server no caso do Ubuntu em versões mais novas o comando é `sudo service lightdm restart`
+
+#### Mac OS/X
+
+1. Instale as fonts da pasta `powerline-fonts` com um duplo click sobre as mesmas, siga as instruções de instalação do seu sistema.
+
+## TMUX (em processo de melhoria)
+O tmux é uma evolução do screen e é um multiplexador de terminal.
+
+1. Instale o tmux, se estiver usando ubuntu use `sudo apt-get install -y tmux` ou via homebrew `brew install tmux`
+
+## VIM (em processo de melhoria)
+O vim (VI Impoved) é uma melhoria do editor de textos VI e está presente em todos os sistemas GNU/Linux modernos de inicio deve ser complicado de usar mas com o tempo você não vai querer largar.
+
+1. Instale o VIM via gerenciador de pacotes como `sudo apt-get install -y vim` no Ubuntu ou `brew install vim` no Mac OS/X.

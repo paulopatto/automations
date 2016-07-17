@@ -116,3 +116,6 @@ export NVM_DIR="/home/u101249/.nvm"
 
 
 eval "$(rbenv init -)"
+
+# OPAM configuration
+. /home/paulopatto/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

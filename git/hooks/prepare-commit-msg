@@ -8,7 +8,7 @@ if [[ "$git_status" =~ On\ branch\ ([^[:space:]]+) ]]; then
   test "$branch" != master || branch=' '
 else
   # Detached HEAD.  (branch=HEAD is a faster alternative.)
-  BRANCH_NAME="`git describe --all --contains --abbrev=4 HEAD 2> /dev/null || echo HEAD`"
+  BRANCH_NAME="`git branch | grep '*' | sed 's/* //' || echo HEAD`"
 fi
 
 echo $1

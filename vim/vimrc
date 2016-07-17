@@ -77,6 +77,11 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'Yggdroot/indentLine'
+" For clojure
+Plugin 'guns/vim-clojure-static'
+Plugin 'kien/rainbow_parentheses.vim'
+Plugin 'guns/vim-clojure-highlight'
+Plugin 'tpope/vim-fireplace'
 " End bundles
 
 call vundle#end()            " required

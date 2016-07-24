@@ -514,4 +514,4 @@ highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
 
 
-let g:vimrubocop_config="$HOME/Code/dotfiles/.rubocop.yml"
+let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"

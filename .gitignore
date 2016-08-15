@@ -2,3 +2,4 @@
 **.*~
 vim/bundle/**
 ansible/*.log
+ansible/.vagrant/

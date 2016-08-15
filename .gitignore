@@ -1,3 +1,4 @@
 .*.sw?
 **.*~
 vim/bundle/**
+ansible/*.log

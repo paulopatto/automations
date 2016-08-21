@@ -55,7 +55,7 @@
     (padding-mode custom)
     (padding-color (color-rgb 0.192157 0.192157 0.192157)))
 (save-session-info no)
-(theme "Gimp-CS6-Theme")
+(theme "gimp-cs6-theme")
 
 
 # end of gimprc

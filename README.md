@@ -25,19 +25,6 @@ Depois de clonado o projeto faça o download das dependências e modulos com git
 `git submodule update --init`
 
 
-## Chef *(em construção - nem sei se essa loucura é possivel)*
-O chef é um software usado para automatizar a configuração de servidores, porém podemos usar ele para automatizar o provisionamento de máquina virtuais com Docker e Vagrant além de sua própria máquina. Você pode consultar e aprender mais sobre o Chef no link de [Learn Chef](https://learnchef.opscode.com/)
-
-Faça o download e instalação do Chef com a linhas de comando abaixo:
-
-> Você vai precisar do [cURL](http://curl.haxx.se/) instalado em sua máquina, verifique o procedimento de instalação para sua plataforma caso esteja no Ubuntu ele pode ser obtido via apt-get com o comando `sudo apt-get install curl`
-
-`curl -L https://www.opscode.com/chef/install.sh | sudo bash`
-
-uma alternativa caso já tenha o ruby (*quero que você leia e **RHABÍ** para ficar chique*) instalado em sua máquina é usar o ruby gems para tal use esta outra linha de comando, o comando *sudo* está entre colchetes para o caso de você não estar usando rvm ou ter de usar permissões de administrador, se usas rbenv ou rvm o comando sudo talvez possa ser suprimido.
-
-`[sudo] gem install chef --no-document`
-
 ## Powerline
 
 O projeto [powerline](https://github.com/Lokaltog/powerline) é o plugin de linha de status para o editor VIM e o Multiplexador de terminal TMUX que uso.

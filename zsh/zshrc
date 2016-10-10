@@ -70,7 +70,8 @@ source $ZSH/oh-my-zsh.sh
 # fi
 
 export EDITOR='vim'
-export TERM='screen-256color'
+# export TERM='screen-256color'
+export TERM='xterm-256color'
 export PAGER='less -rS' # By @dlisboa
 
 ############################################

@@ -48,7 +48,7 @@
   log = true
 
 [alias]
-  m  = "merge --no-ff $1"
+  m  = "merge $1 --no-ff"
   st = status -sb
   ci = commit -v
   l     = "log --topo-order  --pretty=format:'%C(yellow)%H%C(red)%d%n%C(reset)%C(blue)%an <%ae>%n%C(cyan)%aD (%ar)%C(reset)%n%+B'"

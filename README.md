@@ -1,28 +1,5 @@
-# Paulo Patto dotfiles - EM PROCESSO DE CONSTRUÇÃO.
+# Dotfiles
 
-Meus arquivos de configurações para ambiente de desenvolvimento \*nix.
-
-
-> mover o arquivo lxc/default.conf para:
-> ```sh
-> $HOME/.config/lxc/default.config
-> ```
-
-
-## Install
-`sh -c "\`curl -fsSL https://raw.githubusercontent.com/paulopatto/dotfiles/master/install\`"`
-
-
-
-## Download e Setup Inicial
-
-Para usar meus arquivos de configuração você deve clonar o projeto com o comando git clone:
-
-`git clone https://github.com/paulopatto/dotfiles.git ~/.dotfiles && cd ~/.dotfiles`
-
-Depois de clonado o projeto faça o download das dependências e modulos com git.
-
-`git submodule update --init`
 
 
 ## Powerline

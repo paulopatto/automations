@@ -1,0 +1,8 @@
+bundler
+flay
+flog
+httparty
+nokogiri
+pry-nav
+rspec
+rubocop

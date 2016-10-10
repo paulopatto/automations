@@ -112,10 +112,5 @@ alias ohmyzshconfig="$EDITOR $HOME/.oh-my-zsh"
 # alias restartmysq="systemctl restart mysqld"
 # alias mysqlstatus="systemctl status mysqld"
 
-
+#FIXME: Move this to rbenv config file.
 eval "$(rbenv init -)"
-
-##
-# Go env
-##
-export GOPATH=$HOME/.gopath

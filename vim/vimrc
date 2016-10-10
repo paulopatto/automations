@@ -320,8 +320,6 @@ else
     endif
 endif
 
-
-
 " PeepOpen uses <Leader>p as well so you will need to redefine it so something
 " else in your ~/.vimrc file, such as:
 " nmap <silent> <Leader>q <Plug>PeepOpen
@@ -476,7 +474,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-
 "
 " For AirLine
 let g:airline_powerline_fonts = 1
@@ -512,6 +509,5 @@ let g:multi_cursor_start_key='<F6>'
 " Default highlighting (see help :highlight and help :highlight-link)
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
-
 
 let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"

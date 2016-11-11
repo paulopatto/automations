@@ -79,8 +79,6 @@ export PAGER='less -rS' # By @dlisboa
 export GITCONFIG=$HOME/.gitconfig
 export GITIGNORE=$HOME/.gitignore_global
 
-alias branch_changes="git log --pretty='%cn: %s' | grep $(git branch | grep \* | sed 's/[* ]//g')"
-
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 

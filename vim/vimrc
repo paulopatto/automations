@@ -82,6 +82,7 @@ Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-fireplace'
+Plugin 'szw/vim-tags'
 " End bundles
 
 call vundle#end()            " required
@@ -253,6 +254,11 @@ set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 "set listchars=tab:\ \ ,extends:>,precedes:<
 " disabling list because it interferes with soft wrap
 
+" toggle invisible characters
+" set list
+" set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+" set showbreak=↪
+
 set formatoptions-=o "dont continue comments when pushing o/O
 
 "vertical/horizontal scroll off settings
@@ -400,7 +406,7 @@ function! <SID>StripTrailingWhitespaces()
     let l = line(".")
     let c = col(".")
     " Do the business:
-    %s/\s\+$//e
+    " %s/\s\+$//e
     " Clean up: restore previous search history, and cursor position
     let @/=_s
     call cursor(l, c)
@@ -475,8 +481,6 @@ let g:airline_powerline_fonts = 1
 
 " Ag config
 let g:ackprg = 'ag --nogroup --nocolor --column'
-
-
 
 " Set types
 autocmd FileType c,h,cpp,hpp setl cindent ts=4 sts=4 sw=4 noet nolist lcs+=tab:\ \

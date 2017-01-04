@@ -1,0 +1,16 @@
+---
+- hosts: all
+  tasks:
+
+  - name: Install Erlang solutions repo
+    become: true
+    apt:
+      deb: https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb
+      state: present
+
+  - name: Install Elixir related packages debian/ubuntu
+    become: true
+    apt: pkg={{ item }} state=latest update_cache=yes
+    with_items:
+      - esl-erlang
+      - elixir

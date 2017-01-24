@@ -511,7 +511,6 @@ highlight link multiple_cursors_visual Visual
 
 let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"
 
-
 " CTags configs
 " With this config enable
 " - `Ctrl+]` - go to definition

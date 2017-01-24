@@ -510,3 +510,14 @@ highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
 
 let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"
+
+
+" CTags configs
+" With this config enable
+" - `Ctrl+]` - go to definition
+" - `Ctrl+T` - Jump back from the definition.
+" - `Ctrl+\` - Open the definition in a new tab
+" - `Alt+]` - Open the definition in a vertical split
+" - `Ctrl+W | Ctrl+]` - Open the definition in a horizontal split
+map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
+map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>

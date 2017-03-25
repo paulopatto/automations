@@ -1,0 +1,22 @@
+---
+- name: "Install common packages debian/ubuntu"
+  apt: pkg={{ item }} state=latest update_cache=yes
+  with_items:
+    - curl
+    - geoip-bin
+    - geoip-database
+    - libcurl3
+    - libcurl3-gnutls
+    - libcurl4-openssl-dev
+    - libgeoip-dev
+    - libgmp-dev
+    - libgmp3-dev
+    - libreadline6
+    - libreadline6-dev
+    - libxslt-dev
+    - ntp
+    - openssl
+    - xfonts-75dpi
+    - xfonts-base
+  tags: 
+    - packages

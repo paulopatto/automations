@@ -1,0 +1,3 @@
+# Vars
+
+Variables for the roles can be specified in this directory and used in your configuration files.

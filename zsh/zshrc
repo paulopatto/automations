@@ -112,3 +112,13 @@ alias ohmyzshconfig="$EDITOR $HOME/.oh-my-zsh"
 
 #FIXME: Move this to rbenv config file.
 eval "$(rbenv init -)"
+
+# [ -s "/home/paulopatto/.jabba/jabba.sh" ] && source "/home/paulopatto/.jabba/jabba.sh"
+
+#######################
+# ElasticSearch [ELK]
+######################
+# if elasticsearch &> /dev/null ; then
+#   export ES_HOME='/opt/elasticsearch-5.2.1'
+#   alias elkconfig="$EDITOR $ES_HOME/config/elasticsearch.yml"
+# fi

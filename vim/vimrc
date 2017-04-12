@@ -83,6 +83,7 @@ Plugin 'kien/rainbow_parentheses.vim'
 Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-fireplace'
 Plugin 'szw/vim-tags'
+Plugin 'rakr/vim-one'
 " End bundles
 
 call vundle#end()            " required
@@ -520,3 +521,74 @@ let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"
 " - `Ctrl+W | Ctrl+]` - Open the definition in a horizontal split
 map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
+" # One Theme
+" Vim Airline theme
+" https://github.com/rakr/vim-one
+"let g:airline_theme='one' "Uncoment this <<<<<<
+" # Usage
+"
+" One comes in two flavors: light and dark.
+"
+" ```
+" colorscheme one
+" set background=dark " for the dark version
+" " set background=light " for the light version
+" ```
+" ## Italic support
+"
+" Some terminals do not support italic, cf. #3.
+"
+" If your terminal does support italic, you can set the g:one_allow_italics
+" variable to 1 in your .vimrc or .config/nvim/init.vim:
+"
+" ```
+" set background=light        " for the light version
+" let g:one_allow_italics = 1 " I love italic for comments
+" colorscheme one
+" ```
+" ## True color support
+"
+"To benefit from the true color support make sure to add the following lines in your .vimrc or .config/nvim/init.vim
+"
+"Credit joshdick
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+" ```
+" if (empty($TMUX))
+"   if (has("nvim"))
+"   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+"   let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+"   endif
+"   "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+"   "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+"   " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+"   if (has("termguicolors"))
+"     set termguicolors
+"   endif
+" endif
+" ```
+" ## Tmux support
+" 
+" To get true color working in tmux, ensure that the $TERM environment variable is set to xterm-256color. 
+" Inside the .tmux.conf file we need to override this terminal and also set the default terminal as 256 color.
+" ```
+" # Add truecolor support
+" set-option -ga terminal-overrides ",xterm-256color:Tc"
+" # Default terminal is 256 colors
+" set -g default-terminal "screen-256color"
+" ```
+"
+" > Note that this only works for Neovim (tested on 0.1.5). 
+" > For some reason Vim (7.5.2334) doesn't play nice. 
+" > See blog post by Anton Kalyaev for more details on setting up tmux.
+" 
+" For Vim inside tmux, you can add the following snippet in your ~/.vimrc
+" 
+" ```
+" set t_8b=^[[48;2;%lu;%lu;%lum
+" set t_8f=^[[38;2;%lu;%lu;%lum
+" ```
+" > Note: the `^[` in this snippet is a real escape character. To insert it, press Ctrl-V and then Esc.
+

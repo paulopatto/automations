@@ -1,0 +1,24 @@
+---
+language: python
+python: '3.6.1'
+services: 
+  - dokcer
+
+before_install:
+  - sudo apt-get update -qq
+
+addons:
+  apt:
+    packages:
+      - sshpass
+
+install:
+  - pip install docker-py
+  - pip install ansible
+  - ansible --version
+
+script:
+  - echo 'Pending tests'
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/notifications/

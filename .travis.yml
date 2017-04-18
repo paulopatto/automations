@@ -1,7 +1,7 @@
 ---
 language: python
-python: '3.6.1'
-services:
+python: '3.6'
+services: 
   - dokcer
 
 before_install:

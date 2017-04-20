@@ -46,3 +46,9 @@ Afterwards you can go on with `git add -p <filename>`.
 
 > Note this is far different than the `git format-patch` command, 
 > which purpose is to parse commit data into a `.patch` files.
+
+See this little video about it
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Wl0NfWYrvlY" frameborder="0" allowfullscreen></iframe>iframe>
+
+> Credits: http://johnkary.net/blog/git-add-p-the-most-powerful-git-feature-youre-not-using-yet/

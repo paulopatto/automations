@@ -49,6 +49,5 @@ Afterwards you can go on with `git add -p <filename>`.
 
 See this little video about it
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Wl0NfWYrvlY" frameborder="0" allowfullscreen></iframe>iframe>
-
+[![Intro to git add patch mode tutorial](http://img.youtube.com/vi/Wl0NfWYrvlY/0.jpg)](http://www.youtube.com/watch?v=Wl0NfWYrvlY)
 > Credits: http://johnkary.net/blog/git-add-p-the-most-powerful-git-feature-youre-not-using-yet/

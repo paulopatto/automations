@@ -362,7 +362,7 @@ let g:syntastic_enable_signs=1
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
-"
+" 
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
@@ -524,7 +524,13 @@ let g:multi_cursor_start_key='<F6>'
 highlight multiple_cursors_cursor term=reverse cterm=reverse gui=reverse
 highlight link multiple_cursors_visual Visual
 
+" Configs for ngmy/vim-rubocop
+" ============================
 let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"
+let g:vimrubocop_keymap = 0
+" Enable user \r to use RuboCop
+nmap <Leader>r :RuboCop<CR>
+"End of configs for ngmy/vim-rubocop
 
 " CTags configs
 " With this config enable

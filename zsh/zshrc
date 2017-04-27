@@ -122,3 +122,13 @@ eval "$(rbenv init -)"
 #   export ES_HOME='/opt/elasticsearch-5.2.1'
 #   alias elkconfig="$EDITOR $ES_HOME/config/elasticsearch.yml"
 # fi
+
+##############################
+# Configs for nodejs and nvm #
+##############################
+export NVM_DIR="$HOME/.nvm"
+# TODO: Move this code to `nodejs/nvmrc`
+# after put in $HOME/.nvmrc
+if [ -d "$NVM_DIR" ]; then
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+fi

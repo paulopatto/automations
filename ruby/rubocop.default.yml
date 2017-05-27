@@ -15,7 +15,7 @@ Style/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
 Style/CaseIndentation:
-  IndentWhenRelativeTo: end
+  EnforcedStyle: end
 
 Style/AsciiComments:
   Enabled: false
@@ -77,7 +77,7 @@ Style/SingleLineBlockParams:
   Enabled: false
 
 Lint/EndAlignment:
-  AlignWith: variable
+  EnforcedStyleAlignWith: variable
 
 Style/FormatString:
   Enabled: false
@@ -100,3 +100,7 @@ Style/AlignHash:
 
 Style/TrivialAccessors:
   AllowPredicates: true
+
+# Don't enforce frozen string literals
+Style/FrozenStringLiteralComment:
+  Enabled: false

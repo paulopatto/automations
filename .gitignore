@@ -4,3 +4,4 @@ vim/bundle/**
 ansible/*.log
 ansible/.vagrant/
 *.retry
+resources/vaultpass

@@ -101,6 +101,7 @@ alias zshconfig="$EDITOR $HOME/.zshrc"
 alias vimconfig="$EDITOR $HOME/.vim/vimrc"
 alias tmuxconfig="$EDITOR $HOME/.tmux.conf"
 alias ohmyzshconfig="$EDITOR $HOME/.oh-my-zsh"
+alias gitconfig="$EDITOR $HOME/.gitconfig"
 
 ############################
 # MySQL Commands on CentOS

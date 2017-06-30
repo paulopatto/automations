@@ -1,8 +1,13 @@
 bundler
 flay
 flog
-httparty
-nokogiri
 pry-nav
 rspec
+httparty
+nokogiri
 rubocop
+pronto
+pronto-rubocop
+pronto-flay
+pronto-reek
+pronto-brakeman

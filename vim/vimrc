@@ -528,8 +528,8 @@ highlight link multiple_cursors_visual Visual
 " ============================
 let g:vimrubocop_config="$HOME/Code/dotfiles/ruby/rubocop.default.yml"
 let g:vimrubocop_keymap = 0
-" Enable user \r to use RuboCop
-nmap <Leader>r :RuboCop<CR>
+" Enable user \c to use RuboCop
+nmap <Leader>c :RuboCop<CR>
 "End of configs for ngmy/vim-rubocop
 
 " CTags configs

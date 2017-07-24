@@ -611,4 +611,5 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " set t_8f=^[[38;2;%lu;%lu;%lum
 " ```
 " > Note: the `^[` in this snippet is a real escape character. To insert it, press Ctrl-V and then Esc.
+" > NOTE: For :clipboard need vim with +clipboard 
 set clipboard=unnamedplus

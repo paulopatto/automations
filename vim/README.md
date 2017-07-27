@@ -32,3 +32,31 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 
 Add tags to `.gitignore`
+
+# Cheatsheet
+
+## Tmux (CTRL - A)
+
+| Description   | Command       |
+| ------------- |:-------------:|
+| Reorder tabs  | `.`           |
+| Kill tab      | `&`           |
+| Rename tab    | `,`           |
+
+## Vim (CTRL - W)
+
+![VIM Cheatsheet](http://www.viemu.com/vi-vim-cheat-sheet.gif)
+
+| Description   | Command       |
+| ------------- |:-------------:|
+| Close tab     |     `c`       |
+| New Vertical tab |  `v`  |
+| New Horizontal tab |  `s`  |
+| Reload file   |      `:e!`         |
+| Find in file   |     `/regexp`         |
+| Copy inner word   | `yiw`         |
+| Cut inner word   | `ciw`         |
+| Copy line   | `yy`     |
+| Select text until `<char>` and delete it |`vf<char>ld`|
+
+

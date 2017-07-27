@@ -35,13 +35,7 @@ Add tags to `.gitignore`
 
 # Cheatsheet
 
-## Tmux (CTRL - A)
 
-| Description   | Command       |
-| ------------- |:-------------:|
-| Reorder tabs  | `.`           |
-| Kill tab      | `&`           |
-| Rename tab    | `,`           |
 
 ## Vim (CTRL - W)
 

@@ -1,0 +1,14 @@
+! vim: ft=xdefaults
+
+XTerm.termName: xterm-256color
+
+XTerm*renderFont: true
+XTerm*faceName: Meslo LG S DZ for Powerline
+XTerm*faceSize: 12
+
+XTerm.vt100.saveLines: 6096
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.width: 8
+XTerm*VT100.translations: #override <Btn1Up>: select-end(PRIMARY, CLIPBOARD, CUT_BUFFER0)
+
+XTerm*selectToClipboard:true

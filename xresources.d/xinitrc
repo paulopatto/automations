@@ -1,0 +1,2 @@
+# vim: ft=sh
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources

@@ -84,6 +84,8 @@ Plugin 'guns/vim-clojure-highlight'
 Plugin 'tpope/vim-fireplace'
 Plugin 'szw/vim-tags'
 Plugin 'rakr/vim-one'
+
+Plugin 'jpo/vim-railscasts-theme'
 " End bundles
 
 call vundle#end()            " required

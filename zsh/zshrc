@@ -146,3 +146,6 @@ fi
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/paulopatto/.nvm/versions/node/v6.10.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/paulopatto/.nvm/versions/node/v6.10.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
+
+
+alias cless="pygmentize -g $1 | less -N"

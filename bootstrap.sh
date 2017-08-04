@@ -3,7 +3,7 @@
 # Install X configs
 echo "===> Bootstarp .Xresources ..."
 echo "\t---> Create a symlink to .Xresource.d"
-ln -s $PWD/xresources.d $HOME/.Xresources.d
+ln -s $PWD/xresources.d/ $HOME/.Xresources.d
 
 echo "\t---> Create a symlink to .Xresource"
 ln -s $PWD/xresources.d/xresources $HOME/.Xresources

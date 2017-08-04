@@ -7,6 +7,12 @@ ln -s $PWD/xresources.d $HOME/.Xresources.d
 
 echo "\t---> Create a symlink to .Xresource"
 ln -s $PWD/xresources.d/xresources $HOME/.Xresources
+
+echo "\t---> Create a symlink to .xinitrc"
+ln -s $PWD/xresources.d/xinitrc $HOME/.xinitrc
+
+echo "\t---> Merge 'xrdb'"
+xrdb -merge -I$HOME ~/.Xresources
 echo "===> Done bootstrap .Xresources"
 # End X configs
 

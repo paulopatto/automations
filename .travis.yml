@@ -1,6 +1,10 @@
 ---
 language: python
 python: '3.6'
+virtualenv:
+  system_site_packages: true
+install: true
+# See: https://github.com/erasme/ansible-rbenv/blob/master/.travis.yml
 services: 
   - dokcer
 

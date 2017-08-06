@@ -39,9 +39,9 @@ Vagrant.configure(2) do |config|
   # argument is a set of non-required options.
   # config.vm.synced_folder "../data", "/vagrant_data"
 
-  ###############
-  # User configs
-  ###############
+  ##############################
+  ####      User configs    ####
+  ##############################
   config.ssh.username = 'vagrant'
   config.ssh.password = 'vagrant'
   config.ssh.insert_key = 'true'
@@ -75,5 +75,4 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
     sudo apt-get install -y ansible python-software-properties
   SHELL
-
 end

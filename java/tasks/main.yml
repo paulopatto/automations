@@ -15,6 +15,9 @@
     become: true
     shell: "ln -s $HOME/.jabba/jabba.sh /usr/local/bin/jabba"
 
+  - name: "Install Java 1.9.0"
+    shell: "jabba install 1.9.0-181"
+
   tags: 
     - java
     - jvm

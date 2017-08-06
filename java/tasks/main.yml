@@ -1,0 +1,21 @@
+---
+- hosts: all
+  tasks:
+
+  - name: "Install Jabba - Java Version Manager (cross plataform)"
+    # get_url:
+    #   url: https://github.com/shyiko/jabba/raw/master/install.sh
+    #   dest: /tmp
+    shell: "curl -sL https://github.com/shyiko/jabba/raw/master/install.sh | bash && . ~/.jabba/jabba.sh"
+
+  - name: "Turn jabba to exec file"
+    shell: "chmod ~/.jabba/jabba.sh"
+
+  - name: "Add jabba to class path"
+    become: true
+    shell: "ln -s ~/.jabba/jabba.sh /usr/local/bin/jabba"
+
+  tags: 
+    - java
+    - jvm
+    - programming languages

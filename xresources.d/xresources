@@ -2,6 +2,5 @@
 ! $HOME/.Xresources
 
 #include ".Xresources.d/base"
-#include ".Xresources.d/fonts"
 #include ".Xresources.d/xterm"
 #include ".Xresources.d/solarized.dark"

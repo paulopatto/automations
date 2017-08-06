@@ -14,9 +14,8 @@ Nenhuma
 Para rodar use:
 
 ```sh
-ansible-playbook -i 'localhost,' --connection=local elixir/tasks/main.yml
+ansible-playbook -i 'localhost,' --connection=local -K elixir/tasks/main.yml
 ```
-
 
 ## Customização do IEx
 

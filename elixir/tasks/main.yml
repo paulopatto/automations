@@ -10,7 +10,7 @@
 
   - name: Install Elixir related packages debian/ubuntu
     become: true
-    apt: pkg={{ item }} state=latest update_cache=yes
+    apt: pkg={{ item }} state=latest # update_cache=yes
     with_items:
       - esl-erlang
       - elixir

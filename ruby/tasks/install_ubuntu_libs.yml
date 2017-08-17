@@ -6,6 +6,7 @@
   with_items:
     - build-essential
     - git
+    - cmake
     - libcurl4-openssl-dev
     - libffi-dev
     - libreadline-dev

@@ -1,0 +1,79 @@
+---
+- name: "Checkout rbenv"
+  git: >
+    repo={{ rbenv.repo }}
+    dest={{ rbenv.home_path }}
+    accept_hostkey=yes
+    force=yes
+  become_user: "{{ current_user }}"
+  become: yes
+
+- name: "Create plugins directory"
+  file: >
+    state=directory
+    path="{{ rbenv.home_path }}/plugins"
+  become: yes
+  become_user: "{{ current_user }}"
+
+- name: "Install plugins"
+  git: >
+    repo={{ item.repo }}
+    dest={{ rbenv.home_path}}/plugins/{{ item.name }}
+    accept_hostkey=yes
+  with_items: "{{ rbenv.plugins }}"
+  become: yes
+  become_user: "{{ current_user }}"
+
+- name: "Configure defaut-gems"
+  copy: >
+    src=default-gems
+    dest={{ rbenv.home_path }}/default-gems
+  become: yes
+  become_user: "{{ current_user }}"
+  # when:
+  #  - default_gems_file is note defined
+
+- name: "Set ~/.gemrc"
+  copy: src=gemrc dest=$HOME/.gemrc
+  become: yes
+  become_user: "{{ current_user }}"
+
+- name: "check ruby versions installed"
+  shell: $SHELL -lc "{{ rbenv.home_path }}/bin/rbenv versions --bare"
+  become: yes
+  become_user: "{{ current_user }}"
+  register: rbenv_versions
+  changed_when: false
+  failed_when: false
+  check_mode: no
+
+- name: "install ruby {{ item.version }}"
+  shell: $SHELL -lc "{{ rbenv.home_path }}/bin/rbenv install {{ item.version }}"
+  become: yes
+  become_user: "{{ current_user }}"
+  with_items:
+    - "{{ rbenv.rubies }}"
+
+# - name: "install ruby {{ item[0].version }}"
+#   shell: $SHELL -lc "{{ rbenv.home_path }}/bin/rbenv install {{ item[0].version }}"
+#   become: yes
+#   become_user: "{{ current_user }}"
+#   with_nested:
+#     - "{{ rbenv.rubies }}"
+#     - "{{ rbenv_versions.results }}"
+#   when:
+#     - item[1].rc == 0
+#     - item[0].version not in item[1].stdout_lines
+#   #ignore_errors: yes
+#   # environment: "{{ item[1].env | default({}) | combine({ 'TMPDIR': rbenv_tmpdir }) }}"
+
+
+- name: "set ruby {{ rbenv.default_ruby }}"
+  shell: $SHELL -lc "{{ rbenv.home_path }}/bin/rbenv global {{ rbenv.default_ruby }} && rbenv rehash"
+  become: yes
+  become_user: "{{ current_user }}"
+  with_together:
+    - "{{ ruby_selected.results }}"
+  when:
+    - item.rc != 0
+  ignore_errors: yes

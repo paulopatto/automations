@@ -1,0 +1,26 @@
+---
+current_user: paulopatto
+rbenv:
+  repo: "https://github.com/rbenv/rbenv.git"
+  home_path: "$HOME/.rbenv"
+  plugins:
+    - { name: "rbenv-vars", repo: "https://github.com/rbenv/rbenv-vars.git" }
+    - { name: "ruby-build", repo: "https://github.com/rbenv/ruby-build.git" }
+    - { name: "rbenv-default-gems", repo: "https://github.com/rbenv/rbenv-default-gems.git" }
+    - { name: "rbenv-installer",    repo: "https://github.com/rbenv/rbenv-installer.git" }
+    - { name: "rbenv-update",       repo: "https://github.com/rkh/rbenv-update.git" }
+    - { name: "rbenv-whatis",       repo: "https://github.com/rkh/rbenv-whatis.git" }
+    - { name: "rbenv-use",          repo: "https://github.com/rkh/rbenv-use.git" }
+  default_ruby: 2.4.1
+  rubies:
+    - version: 2.4.1
+      env: 
+      RUBY_CONFIGURE_OPTS: "--enabled-shared --with-jemalloc"
+    - version: 2.4.0
+    - version: 2.3.0
+    - version: 2.2.4
+      env:
+        RUBY_CONFIGURE_OPTS: "--enabled-shared --with-jemalloc"
+  rbenv_extra_depends:
+    - libjemalloc1
+    - libjemalloc-dev

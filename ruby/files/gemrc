@@ -1,0 +1,5 @@
+---
+:sources:
+- http://rubygems.org
+install: --no-document
+update: --no-document

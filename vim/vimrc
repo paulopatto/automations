@@ -317,10 +317,10 @@ else
 
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme molokai
+        colorscheme Tomorrow-Night
     else
       set term=xterm-256color
-      colorscheme molokai
+      colorscheme Tomorrow-Night
     endif
 endif
 

@@ -9,3 +9,4 @@
 Procfile.development
 tags
 i
+public/assets/**/*.webp

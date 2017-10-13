@@ -1,0 +1,10 @@
+parts {
+  device {
+    display {
+      width 1440
+      heigth 2560
+      x 0
+      y 0
+    }
+  }
+}

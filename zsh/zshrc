@@ -116,7 +116,7 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
-# [ -s "/home/paulopatto/.jabba/jabba.sh" ] && source "/home/paulopatto/.jabba/jabba.sh"
+[ -s "/home/paulopatto/.jabba/jabba.sh" ] && source "/home/paulopatto/.jabba/jabba.sh"
 
 #######################
 # ElasticSearch [ELK]
@@ -149,3 +149,7 @@ fi
 
 
 alias cless="pygmentize -g $1 | less -N"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$HOME/miniconda3/bin:$PATH
+export ANDROID_HOME=/opt/android_sdk

@@ -57,7 +57,7 @@ See this little video about it
 
 ## Gerando a chave
 
-> Você pode ver um artigo muito bom em https://help.github.com/articles/generating-a-new-gpg-key/
+> Você pode ver um artigo muito bom em https://help.github.com/articles/generating-a-new-gpg-key/ e a importãncia de ter essa feature no seu workflow de uso do git #24
 
 ### Algoritmos suportados
 

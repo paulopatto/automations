@@ -86,6 +86,11 @@ Plugin 'szw/vim-tags'
 Plugin 'rakr/vim-one'
 
 Plugin 'jpo/vim-railscasts-theme'
+
+" Plugins to React-Native
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
 " End bundles
 
 call vundle#end()            " required

@@ -24,11 +24,35 @@ echo "===> Installed patched fonts"
 echo "\t Done!\n"
 # End install fonts
 
+# Oh My ZSH
+echo "---> installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # Copy zshrc
 echo "---> coping zshrc"
 ln -s $PWD/zhs/zshrc $HOME/.zshrc
 
+# Install Antigen ZSH plugin manager
+echo "===> Installing zsh plugin manager Antigen"
+echo "---> Clone from oficial repo to $HOME/antigen"
+git clone https://github.com/zsh-users/antigen.git $HOME/antigen
 
+echo "You have several alternative methods to install Antigen as well.
+
+Using Debian package:
+
+  apt-get install zsh-antigen
+
+On Archlinux you may use antigen-git package:
+
+  yaourt -S antigen-git
+
+On OSX you may use Homebrew:
+
+  brew install antigen"
+
+echo "---> Install zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 # Install python packages
 
 echo "---> Install Python development tools"

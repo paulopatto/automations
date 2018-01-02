@@ -96,3 +96,9 @@ echo "---> Installing numix..."
 sudo apt-get install -y numix-gtk-theme numix-icon-theme-circle numix-* unity-tweak-tool
 echo "\t [OK]"
 echo "\t [Done]"
+
+echo '---> Installing fzf: um fuzzy finder (buscador de arquivos) direto no terminal!! (y for all)'
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+echo 'Pronto, agora você poderá usar Ctrl+T quando precisar procurar por arquivos, que nem você faria no seu editor ;-)'
+echo 'Viste https://github.com/junegunn/fzf para mais informações'

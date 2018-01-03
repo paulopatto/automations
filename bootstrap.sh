@@ -18,17 +18,43 @@ echo "===> Done bootstrap .Xresources"
 
 # Install fonts
 echo "===> Install patched fonts"
-git submodule update --init
 sh $PWD/fonts/install.sh
 echo "===> Installed patched fonts"
 echo "\t Done!\n"
 # End install fonts
 
+# Oh My ZSH
+echo "---> installing oh-my-zsh"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "---> Installing custom theme PowerLevel9K"
+git clone https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k
+
 # Copy zshrc
 echo "---> coping zshrc"
 ln -s $PWD/zhs/zshrc $HOME/.zshrc
 
+# Install Antigen ZSH plugin manager
+echo "===> Installing zsh plugin manager Antigen"
+echo "---> Clone from oficial repo to $HOME/antigen"
+git clone https://github.com/zsh-users/antigen.git $HOME/antigen
 
+echo "You have several alternative methods to install Antigen as well.
+
+Using Debian package:
+
+  apt-get install zsh-antigen
+
+On Archlinux you may use antigen-git package:
+
+  yaourt -S antigen-git
+
+On OSX you may use Homebrew:
+
+  brew install antigen"
+
+echo "---> Install zsh-syntax-highlighting"
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 # Install python packages
 
 echo "---> Install Python development tools"
@@ -72,3 +98,9 @@ echo "---> Installing numix..."
 sudo apt-get install -y numix-gtk-theme numix-icon-theme-circle numix-* unity-tweak-tool
 echo "\t [OK]"
 echo "\t [Done]"
+
+echo '---> Installing fzf: um fuzzy finder (buscador de arquivos) direto no terminal!! (y for all)'
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+echo 'Pronto, agora você poderá usar Ctrl+T quando precisar procurar por arquivos, que nem você faria no seu editor ;-)'
+echo 'Viste https://github.com/junegunn/fzf para mais informações'

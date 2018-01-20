@@ -62,7 +62,7 @@ sudo apt-get install -y python3-dev python3-pip
 
 echo "---> Install Pyhton PIP packages"
 pip3 install --upgrade pip
-pip3 install --user ipython 
+pip3 install --user ipython
 pip3 install --user git+git://github.com/Lokaltog/powerline
 pip3 install --user powerline-status
 pip3 install --user jupyter
@@ -77,7 +77,7 @@ echo "---> Create a symlink to tmux.conf"
 ln -s $PWD/tmux/tmux.conf $HOME/.tmux.conf
 echo "\t Done!\n"
 
-# Install vim 
+# Install vim
 
 echo "---> Install vim editor"
 sudo apt-get install -y ncurses-term exuberant-ctags vim vim-gnome python-dev tmux
@@ -104,3 +104,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
 echo 'Pronto, agora você poderá usar Ctrl+T quando precisar procurar por arquivos, que nem você faria no seu editor ;-)'
 echo 'Viste https://github.com/junegunn/fzf para mais informações'
+
+
+echo "ASDF-VM (experimental)"
+source asdf-vm/install.sh

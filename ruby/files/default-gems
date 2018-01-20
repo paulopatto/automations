@@ -11,3 +11,5 @@ pronto-rubocop
 pronto-flay
 pronto-reek
 pronto-brakeman
+awesome_print
+gem-ctags

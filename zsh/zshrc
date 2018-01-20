@@ -58,7 +58,7 @@ plugins=(git ruby rails pip zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH="$HOME/.local/bin:$HOME/bin:$HOME/.rbenv/shims:$HOME/.rbenv/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -115,12 +115,6 @@ alias gitconfig="$EDITOR $HOME/.gitconfig"
 # alias restartmysq="systemctl restart mysqld"
 # alias mysqlstatus="systemctl status mysqld"
 
-#FIXME: Move this to rbenv config file.
-if [ -d "$HOME/.rbenv" ]; then
-  eval "$(rbenv init -)"
-fi
-
-[ -s "/home/paulopatto/.jabba/jabba.sh" ] && source "/home/paulopatto/.jabba/jabba.sh"
 
 #######################
 # ElasticSearch [ELK]
@@ -130,32 +124,15 @@ fi
 #   alias elkconfig="$EDITOR $ES_HOME/config/elasticsearch.yml"
 # fi
 
-##############################
-# Configs for nodejs and nvm #
-##############################
-export NVM_DIR="$HOME/.nvm"
-# TODO: Move this code to `nodejs/nvmrc`
-# after put in $HOME/.nvmrc
-if [ -d "$NVM_DIR" ]; then
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-fi
-
-# added by travis gem
-[ -f /home/paulopatto/.travis/travis.sh ] && source /home/paulopatto/.travis/travis.sh
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /home/paulopatto/.nvm/versions/node/v6.10.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/paulopatto/.nvm/versions/node/v6.10.1/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /home/paulopatto/.nvm/versions/node/v6.10.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /home/paulopatto/.nvm/versions/node/v6.10.1/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-
-
 alias cless="pygmentize -g $1 | less -N"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=$HOME/miniconda3/bin:$PATH
 export ANDROID_HOME=/opt/android_sdk
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Configs to ASDF-VM:
+[ -f /home/paulopatto/.asdf/asdf.zsh ] && source /home/paulopatto/.asdf/asdf.sh
+[ -f /home/paulopatto/.asdf/completons/asdf.bash ] && source /home/paulopatto/.asdf/completions/asdf.bash
+# End of ASDF-VM
+

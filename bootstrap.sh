@@ -106,5 +106,5 @@ echo 'Pronto, agora você poderá usar Ctrl+T quando precisar procurar por arqui
 echo 'Viste https://github.com/junegunn/fzf para mais informações'
 
 
-echo "ASDF-VM (experimental"
+echo "ASDF-VM (experimental)"
 source asdf-vm/install.sh

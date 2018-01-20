@@ -14,5 +14,14 @@ if [ -d "$ASDF_HOME"  ]; then
 [ -f $ASDF_HOME/completons/asdf.bash ] && source $ASDF_HOME/completions/asdf.bash
 # End of ASDF-VM
   " >> $HOME/.zshrc
+
+
+  echo "--> Install asdf-vm plugins: "
+
+  echo "\t+ Ruby (TODO: Move to ruby role)"
+  asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
+
+  echo "\t+ Golang (TODO: Move to go role)"
+  asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
 fi
 

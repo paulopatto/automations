@@ -18,5 +18,6 @@
     - openssl
     - xfonts-75dpi
     - xfonts-base
-  tags: 
+    - silversearcher-ag
+  tags:
     - packages

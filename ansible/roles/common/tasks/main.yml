@@ -16,8 +16,9 @@
     - libxslt-dev
     - ntp
     - openssl
+    - silversearcher-ag
     - xfonts-75dpi
     - xfonts-base
-    - silversearcher-ag
+    - zsh
   tags:
     - packages

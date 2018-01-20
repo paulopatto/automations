@@ -25,7 +25,12 @@ echo "\t Done!\n"
 
 # Oh My ZSH
 echo "---> installing oh-my-zsh"
+apt install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "---> Changing default shell"
+chsh -s /bin/zsh
+echo "[WARN] You need restart you terminal"
 
 echo "---> Installing custom theme PowerLevel9K"
 git clone https://github.com/bhilburn/powerlevel9k.git $HOME/.oh-my-zsh/custom/themes/powerlevel9k

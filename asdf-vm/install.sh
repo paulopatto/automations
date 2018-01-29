@@ -23,5 +23,9 @@ if [ -d "$ASDF_HOME"  ]; then
 
   echo "\t+ Golang (TODO: Move to go role)"
   asdf plugin-add golang https://github.com/kennyp/asdf-golang.git
+
+  echo "\t+ Elixir"
+  asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
+  asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
 fi
 

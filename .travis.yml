@@ -1,12 +1,7 @@
 ---
-language: python
-python: '3.6'
-virtualenv:
-  system_site_packages: true
-install: true
-# See: https://github.com/erasme/ansible-rbenv/blob/master/.travis.yml
-services: 
-  - dokcer
+language: sh
+services:
+  - docker
 
 before_install:
   - sudo apt-get update -qq
@@ -16,13 +11,14 @@ addons:
     packages:
       - sshpass
 
+before_install:
+  - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+  - git submodule update --init --recursive
+
 install:
-  - pip install docker-py
-  - pip install ansible
-  - ansible --version
 
 script:
   - echo 'Pending tests'
 
 notifications:
-  webhooks: https://galaxy.ansible.com/api/notifications/
+  # webhooks: https://galaxy.ansible.com/api/notifications/

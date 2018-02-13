@@ -1,0 +1,13 @@
+{
+  "name": "paulopatto/dotfiles",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Personal dotfile by @paulopatto",
+  "install": "./bootstrap.sh ${PREFIX:-$HOME}",
+  "peerDependencies": {
+    "bats":         "git+https://github.com/sstephenson/bats.git#v0.4.0",
+    "bats-support": "git+https://github.com/ztombol/bats-support.git#v0.3.0",
+    "bats-assert":  "git+https://github.com/ztombol/bats-assert.git#v0.3.0",
+    "bats-file":    "git+https://github.com/ztombol/bats-file.git#v0.2.0"
+  }
+}

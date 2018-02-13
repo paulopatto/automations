@@ -14,11 +14,12 @@ addons:
 before_install:
   - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
   - git submodule update --init --recursive
+  - sudo ln -s $PWD/test/support/bats/bin/bats /usr/local/bin
 
 install:
 
 script:
-  - echo 'Pending tests'
+  - bats test/*.bats
 
 notifications:
   # webhooks: https://galaxy.ansible.com/api/notifications/

@@ -1,4 +1,4 @@
-#!.test/support/bats/bin/bats sh
+#!/usr/bin/env bats i
 # vim: set ft=sh :
 
 load 'bats_helper'

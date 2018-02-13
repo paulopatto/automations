@@ -1,3 +1,15 @@
 [submodule "Vundle.vim"]
   path = vim/bundle/Vundle.vim
   url  = https://github.com/VundleVim/Vundle.vim.git
+[submodule "test/support/bats"]
+	path = test/support/bats
+	url = https://github.com/sstephenson/bats
+[submodule "test/support/bats-support"]
+	path = test/support/bats-support
+	url = https://github.com/ztombol/bats-support
+[submodule "test/support/bats-assert"]
+	path = test/support/bats-assert
+	url = https://github.com/ztombol/bats-assert
+[submodule "test/support/bats-file"]
+	path = test/support/bats-file
+	url = https://github.com/ztombol/bats-file

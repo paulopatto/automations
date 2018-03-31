@@ -5,7 +5,7 @@ XTerm.termName: xterm-256color
 XTerm*renderFont: true
 XTerm*faceName: Hack NF
 ! XTerm*faceName: Meslo LG S DZ for Powerline Nerd Font
-XTerm*faceSize: 12
+XTerm*faceSize: 11
 
 XTerm.vt100.saveLines: 6096
 XTerm.vt100.scrollBar: true

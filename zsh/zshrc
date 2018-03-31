@@ -132,7 +132,7 @@ export ANDROID_HOME=/opt/android_sdk
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Configs to ASDF-VM:
-source /home/paulopatto/.asdf/asdf.sh
-source /home/paulopatto/.asdf/completions/asdf.bash
+[ -f $HOME/.asdf/asdf.sh ] && source $HOME/.asdf/asdf.sh
+[ -f $HOME/.asdf/completions/asdf.bash ] && source $HOME/.asdf/completions/asdf.bash
 # End of ASDF-VM
 

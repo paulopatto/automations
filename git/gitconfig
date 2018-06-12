@@ -3,11 +3,12 @@
 [user]
   name  = Paulo Patto
   email = paulopatto@paulopatto.com
-	signingkey = 58ACE7E2A09E6305
+  #signingkey = 58ACE7E2A09E6305
+  signingkey  = 1A30B4148727CC84
 
 # Usar esse se precisar substituir as chamadas 'git://' por 'https://'
-[url "https://"]
-	insteadOf = git://
+#[url "https://"]
+#	insteadOf = git://
 
 [http]
   # proxy =

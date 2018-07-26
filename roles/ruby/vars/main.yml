@@ -14,7 +14,7 @@ rbenv:
   default_ruby: 2.4.1
   rubies:
     - version: 2.4.1
-      env: 
+      env:
       RUBY_CONFIGURE_OPTS: "--enabled-shared --with-jemalloc"
     - version: 2.4.0
     - version: 2.3.0

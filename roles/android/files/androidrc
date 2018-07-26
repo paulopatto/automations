@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+# vim: set ft=sh :
+
+export ANDROID_SKD_HOME=/opt/AndroidSDK
+
+if [ -d $ANDROID_SDK_HOME ]; then
+  PATH=$PATH:$ANDROID_SDK_HOME/tools/:$ANDROID_SDK_HOME/tools/bin
+fi

@@ -1,0 +1,21 @@
+---
+# http://dl.google.com/android/android-sdk_r24.4.1-linux.tgz
+android_sdk_download_location:
+android_sdk_install_dir: /opt
+
+android_skd:
+  download_url: https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
+  install_dir: /opt
+  packages:
+    - package: tools
+    - package: platform-tools
+    - package: emulator
+    - package: add-ons;addon-google_apis-google-24
+    - package: build-tools;23.0.1
+    - package: build-tools;26.0.2
+    - package: cmake;3.6.4111459
+    - package: patcher;v4
+    - package: platforms;android-23
+    - package: platforms;android-26
+    - package: system-images;android-26;google_apis;x86
+    - package: system-images;android-26;google_apis_playstore;x86

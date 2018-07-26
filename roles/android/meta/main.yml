@@ -1,0 +1,5 @@
+---
+# https://docs.ansible.com/ansible/2.5/user_guide/playbooks_reuse_roles.html#role-dependencies
+dependencies:
+  - { role: common }
+  - { role: java   }

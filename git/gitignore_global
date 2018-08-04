@@ -10,3 +10,6 @@ Procfile.development
 tags
 i
 public/assets/**/*.webp
+.tools-versions
+.tool-versions
+nohup.out

@@ -1,0 +1,3 @@
+# Handlers
+
+All handlers that were in your playbook previously can now be added into this directory.

@@ -1,0 +1,8 @@
+---
+- name: "Install ASDF-VM"
+
+  tags:
+    - version manager
+    - asdf-vm
+    - utils
+    - dev

@@ -91,6 +91,12 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 
+" Colorscheme
+Plugin 'tomasiser/vim-code-dark'
+
+" CSS
+Plugin 'ap/vim-css-color'
+
 " End bundles
 
 call vundle#end()            " required
@@ -365,11 +371,11 @@ let g:ragtag_global_maps = 1
 "
 "mark syntax errors with :signs
 " let g:syntastic_enable_signs=1
-" 
+"
 " set statusline+=%#warningmsg#
 " set statusline+=%{SyntasticStatuslineFlag()}
 " set statusline+=%*
-" 
+"
 " let g:syntastic_always_populate_loc_list = 1
 " let g:syntastic_auto_loc_list = 1
 " let g:syntastic_check_on_open = 1
@@ -597,8 +603,8 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " endif
 " ```
 " ## Tmux support
-" 
-" To get true color working in tmux, ensure that the $TERM environment variable is set to xterm-256color. 
+"
+" To get true color working in tmux, ensure that the $TERM environment variable is set to xterm-256color.
 " Inside the .tmux.conf file we need to override this terminal and also set the default terminal as 256 color.
 " ```
 " # Add truecolor support
@@ -607,17 +613,17 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " set -g default-terminal "screen-256color"
 " ```
 "
-" > Note that this only works for Neovim (tested on 0.1.5). 
-" > For some reason Vim (7.5.2334) doesn't play nice. 
+" > Note that this only works for Neovim (tested on 0.1.5).
+" > For some reason Vim (7.5.2334) doesn't play nice.
 " > See blog post by Anton Kalyaev for more details on setting up tmux.
-" 
+"
 " For Vim inside tmux, you can add the following snippet in your ~/.vimrc
-" 
+"
 " ```
 " set t_8b=^[[48;2;%lu;%lu;%lum
 " set t_8f=^[[38;2;%lu;%lu;%lum
 " ```
 " > Note: the `^[` in this snippet is a real escape character. To insert it, press Ctrl-V and then Esc.
-" > NOTE: For :clipboard need vim with +clipboard 
+" > NOTE: For :clipboard need vim with +clipboard
 set clipboard=unnamedplus
 :silent exe "g:flog_enable"

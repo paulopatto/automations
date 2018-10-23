@@ -54,3 +54,8 @@ Add tags to `.gitignore`
 | Select text until `<char>` and delete it |`vf<char>ld`|
 
 
+## Multiple cursor
+
+- [README](https://github.com/terryma/vim-multiple-cursors/blob/master/README.md)
+
+

@@ -302,7 +302,7 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme Tomorrow-Night
+    colorscheme codedark
     set guitablabel=%M%t
     set lines=40
     set columns=115
@@ -328,10 +328,10 @@ else
 
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme Tomorrow-Night
+        colorscheme codedark
     else
       set term=xterm-256color
-      colorscheme Tomorrow-Night
+      colorscheme codedark
     endif
 endif
 

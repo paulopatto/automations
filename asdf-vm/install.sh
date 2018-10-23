@@ -18,6 +18,7 @@ if [ -d "$ASDF_HOME"  ]; then
 
   echo "--> Install asdf-vm plugins: "
 
+  #FIXME: Erro com ruby 2.3: https://bbs.archlinux.org/viewtopic.php?id=226614
   echo "\t+ Ruby (TODO: Move to ruby role)"
   asdf plugin-add ruby https://github.com/asdf-vm/asdf-ruby.git
 

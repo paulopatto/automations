@@ -35,6 +35,7 @@ call vundle#begin() " alternatively, pass a path where Vundle should install plu
 " PLUGINS
 Plugin 'Lokaltog/powerline', {'rtp':  'powerline/bindings/vim'}
 "Plugin 'Lokaltog/vim-powerline'
+Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'} " Color schem pack see options in http://daylerees.github.io/
 Plugin 'kien/ctrlp.vim'
 Plugin 'godlygeek/csapprox' " Required by 'tpope/vim-fugitive' https://github.com/tpope/vim-fugitive/issues/705
 Plugin 'tpope/vim-fugitive'
@@ -77,6 +78,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'Yggdroot/indentLine'
+
 " For clojure
 Plugin 'guns/vim-clojure-static'
 Plugin 'kien/rainbow_parentheses.vim'

@@ -139,3 +139,6 @@ export ANDROID_HOME=/opt/android_sdk
 
 # OPAM configuration
 . /home/paulopatto/.asdf/installs/ocaml/4.07.0/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+
+alias vim="vimx"

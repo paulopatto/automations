@@ -142,3 +142,4 @@ export ANDROID_HOME=/opt/android_sdk
 
 
 alias vim="vimx"
+alias python="/usr/bin/python3"

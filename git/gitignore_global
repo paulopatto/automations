@@ -13,3 +13,4 @@ public/assets/**/*.webp
 .tools-versions
 .tool-versions
 nohup.out
+spec/vcr/services/referral_candy_service.yml

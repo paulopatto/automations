@@ -22,5 +22,8 @@ if [ -d "$ASDF_HOME"  ]; then
   echo "\t+ Elixir"
   asdf plugin-add erlang https://github.com/asdf-vm/asdf-erlang.git
   asdf plugin-add elixir https://github.com/asdf-vm/asdf-elixir.git
+
+  echo "\t+ Dart"
+  asdf plugin-add dart https://github.com/patoconnor43/asdf-dart.git
 fi
 

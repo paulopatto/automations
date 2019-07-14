@@ -1,9 +1,11 @@
 ---
 - hosts: all
+  tasks:
+    - include: 'tasks/main.yml'
   vars_files:
     - 'vars/main.yml'
   handlers:
     - include: 'handlers/main.yml'
-  tasks:
-    - include: 'tasks/main.yml'
-
+  tags:
+    - devops
+    - tools

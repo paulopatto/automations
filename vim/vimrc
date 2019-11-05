@@ -501,6 +501,20 @@ set foldlevel=1         "this is just what i use
 
 
 " Rspec.vim mappings
+let g:rspec_executable = "bundle exec rspec"
+
+function! ToggleRSpecCommand()
+  if g:rspec_executable == "bundle exec rspec"
+    let g:rspec_executable = "bin/rspec"
+  else
+    let g:rspec_executable = "bundle exec rspec"
+  endif
+  echo "rspec_executable set to " . g:rspec_executable
+  let g:rspec_command = "Dispatch " . g:rspec_executable . " {spec} --format=progress"
+endfunction
+
+map <Leader>e :call ToggleRSpecCommand()<CR>
+
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>

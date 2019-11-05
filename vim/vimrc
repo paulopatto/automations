@@ -78,6 +78,7 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'wakatime/vim-wakatime'
 Plugin 'Yggdroot/indentLine'
+Plugin 'slim-template/vim-slim'
 
 " For clojure
 Plugin 'guns/vim-clojure-static'

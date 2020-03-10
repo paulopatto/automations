@@ -25,7 +25,7 @@ echo "\t Done!\n"
 
 # Oh My ZSH
 echo "---> installing oh-my-zsh"
-apt install -y zsh
+sudo dnf install -y zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "---> Changing default shell"
@@ -42,8 +42,12 @@ ln -s $PWD/zhs/zshrc $HOME/.zshrc
 # Install Antigen ZSH plugin manager
 echo "===> Installing zsh plugin manager Antigen"
 echo "---> Clone from oficial repo to $HOME/antigen"
-# git clone https://github.com/zsh-users/antigen.git $HOME/.antigen
-yaourt -S antigen-git
+#git clone https://github.com/zsh-users/antigen.git $HOME/.antigen
+#yaourt -S antigen-git
+mkdir -p $HOME/.zsh
+curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
+echo "# Import antigen ZSH Plugin Manager" >> $HOME/.zshrc
+echo "source $HOME/.zsh/antigen.zsh" >> $HOME/.zshrc
 echo "You have several alternative methods to install Antigen as well.
 
 Using Debian package:
@@ -58,8 +62,12 @@ On OSX you may use Homebrew:
 
   brew install antigen"
 
+source $HOME/.zshrc
+
 echo "---> Install zsh-syntax-highlighting"
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
+# Syntax highlighting bundle.
+antigen bundle zsh-users/zsh-syntax-highlighting
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $HOME/.oh-my-zsh/plugins/zsh-syntax-highlighting
 # Install python packages
 
 echo "---> [FIXME}: Install Python development tools"
@@ -77,7 +85,7 @@ echo "\t Done!\n"
 echo "[TMUX ROLE]"
 
 echo "---> Install tmux"
-sudo apt-get install -y tmux
+sudo dnf install -y tmux
 echo "---> Create a symlink to tmux.conf"
 ln -s $PWD/tmux/tmux.conf $HOME/.tmux.conf
 echo "\t Done!\n"
@@ -86,7 +94,7 @@ echo "\t Done!\n"
 
 echo "---> [FIXME] Install vim editor"
 # sudo apt-get install -y ncurses-term exuberant-ctags vim vim-gnome python-dev tmux
-sudo pacman -Sy vim vim-gnome ctags
+sudo dnf -y vim vim-gnome ctags
 echo "\t Done!\n"
 
 echo "---> Config vim"

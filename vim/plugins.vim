@@ -1,9 +1,10 @@
 
 Plugin 'godlygeek/csapprox'                        " Required by 'tpope/vim-fugitive' https://github.com/tpope/vim-fugitive/issues/705
 Plugin 'tpope/vim-fugitive'                        " A Git wrapper so awesome
+Plugin 'scrooloose/nerdtree'                       " The NERDTree is a file system explorer for the Vim editor.
+Plugin 'ctrlpvim/ctrlp.vim'                        " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'} " Color schem pack see options in http://daylerees.github.io/
 Plugin 'jg/bufexplorer'                            " Vim bufexplorer plugin
-Plugin 'scrooloose/nerdtree'                       " The NERDTree is a file system explorer for the Vim editor.
 Plugin 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
 Plugin 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
 Plugin 'vim-syntastic/syntastic'                   " Syntax checking hacks for vim

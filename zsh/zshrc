@@ -88,58 +88,20 @@ export GITIGNORE=$HOME/.gitignore_global
 # export ARCHFLAGS="-arch x86_64"
 
 
-###############
-# ssh
-###############
-export SSH_KEY_PATH="~/.ssh/dsa_id"
-export SSHKEY="cat $HOME/.ssh/id_rsa.pub"
-
-#Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-
-##################################
-#### CONFIGS FILES
-##################################
-alias zshconfig="$EDITOR $HOME/.zshrc"
-alias vimconfig="$EDITOR $HOME/.vim/vimrc"
-alias tmuxconfig="$EDITOR $HOME/.tmux.conf"
-alias ohmyzshconfig="$EDITOR $HOME/.oh-my-zsh"
-alias gitconfig="$EDITOR $HOME/.gitconfig"
-
-############################
-# MySQL Commands on CentOS
-############################
-# alias startmysql="systemctl start mysqld"
-# alias stopmysql="systemctl stop mysqld"
-# alias restartmysq="systemctl restart mysqld"
-# alias mysqlstatus="systemctl status mysqld"
-
-
-#######################
-# ElasticSearch [ELK]
-######################
-# if elasticsearch &> /dev/null ; then
-#   export ES_HOME='/opt/elasticsearch-5.2.1'
-#   alias elkconfig="$EDITOR $ES_HOME/config/elasticsearch.yml"
-# fi
+source $HOME/.zsh/default-aliases.zsh
+source $HOME/.zsh/plugins.zsh
 
 alias cless="pygmentize -g $1 | less -N"
 
-export PATH=$HOME/miniconda3/bin:$PATH
-export ANDROID_HOME=/opt/android_sdk
+if [ -d "$HOME/miniconda3" ]
+then
+  export PATH=$HOME/miniconda3/bin:$PATH
+fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.zsh/antigen.zsh ] && source $HOME/.zsh/antigen.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # Configs to ASDF-VM:
 [ -f $HOME/.asdf/asdf.sh ] && source $HOME/.asdf/asdf.sh
 [ -f $HOME/.asdf/completions/asdf.bash ] && source $HOME/.asdf/completions/asdf.bash
 # End of ASDF-VM
-
-# OPAM configuration
-. /home/paulopatto/.asdf/installs/ocaml/4.07.0/opam-init/init.zsh > /dev/null 2> /dev/null || true
-
-
-#alias vim="vimx"
-alias python="/usr/bin/python3"

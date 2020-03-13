@@ -54,7 +54,8 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby rails pip zsh-syntax-highlighting)
+# plugins=(git ruby rails pip zsh-syntax-highlighting)
+source $HOME/.zsh/plugins.zsh
 
 # User configuration
 
@@ -88,8 +89,14 @@ export GITIGNORE=$HOME/.gitignore_global
 # export ARCHFLAGS="-arch x86_64"
 
 
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
+
+# Configs to ASDF-VM:
+[ -f $HOME/.asdf/asdf.sh ] && source $HOME/.asdf/asdf.sh
+[ -f $HOME/.asdf/completions/asdf.bash ] && source $HOME/.asdf/completions/asdf.bash
+# End of ASDF-VM
+
 source $HOME/.zsh/default-aliases.zsh
-source $HOME/.zsh/plugins.zsh
 
 alias cless="pygmentize -g $1 | less -N"
 
@@ -98,10 +105,3 @@ then
   export PATH=$HOME/miniconda3/bin:$PATH
 fi
 
-[ -f $HOME/.zsh/antigen.zsh ] && source $HOME/.zsh/antigen.zsh
-[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
-# Configs to ASDF-VM:
-[ -f $HOME/.asdf/asdf.sh ] && source $HOME/.asdf/asdf.sh
-[ -f $HOME/.asdf/completions/asdf.bash ] && source $HOME/.asdf/completions/asdf.bash
-# End of ASDF-VM

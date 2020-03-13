@@ -1,12 +1,12 @@
-command -v antigen && { source $HOME/.zsh/antigen.zsh }
-
-antigens use oh-my-zsh
+[ -f $HOME/.zsh/antigen.zsh ] && source $HOME/.zsh/antigen.zsh
+antigen use oh-my-zsh
 
 antigen bundle git
-antigen ruby
-antigen heroku
-antigen pip
-antigen lein
+antigen bundle ruby
+antigen bundle heroku
+antigen bundle pip
+antigen bundle lein
+antigen bundle gusaiani/elixir-oh-my-zsh
 
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting

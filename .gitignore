@@ -5,3 +5,5 @@ ansible/*.log
 ansible/.vagrant/
 *.retry
 resources/vaultpass
+*.zwc
+zsh/antigen.zsh

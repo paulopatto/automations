@@ -1,6 +1,5 @@
 source $HOME/.vim/core.vim
 
-
 "disable visual bell
 set visualbell t_vb=
 

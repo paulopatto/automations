@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export SHELL=/bin/zsh
 export ZSH=$HOME/.oh-my-zsh
+. $HOME/.zsh/plugins.zsh
+. $ZSH/oh-my-zsh.sh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -55,14 +57,12 @@ DISABLE_AUTO_TITLE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git ruby rails pip zsh-syntax-highlighting)
-source $HOME/.zsh/plugins.zsh
 
 # User configuration
 
 export PATH="$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 export LANG="pt_BR.UTF-8"

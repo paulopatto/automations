@@ -9,6 +9,7 @@ Plugin 'danro/rename.vim'                          " Rename the current file in 
 Plugin 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
 Plugin 'vim-syntastic/syntastic'                   " Syntax checking hacks for vim
 Plugin 'vim-scripts/Gundo'                         " Vim plugin to visualize your Vim undo tree.
+Plugin 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim plugins such as: NERDTree
 
 " ================================
 " Snippets Packs
@@ -32,7 +33,10 @@ Plugin 'mhinz/vim-janah'
 
 
 " Extras
+Plugin 'elixir-editors/vim-elixir'                 " Elixir support for vim
+Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses ElixirSense to give inside information about your project.
+Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
+Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
 
-Plugin 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim plugins such as: NERDTree
 " Maybe in future use https://github.com/Shougo/defx.nvim
 

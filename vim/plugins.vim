@@ -1,9 +1,11 @@
 
+Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'} " Color schem pack see options in http://daylerees.github.io/
+Plugin 'ctrlpvim/ctrlp.vim'                        " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plugin 'godlygeek/csapprox'                        " Required by 'tpope/vim-fugitive' https://github.com/tpope/vim-fugitive/issues/705
 Plugin 'tpope/vim-fugitive'                        " A Git wrapper so awesome
 Plugin 'scrooloose/nerdtree'                       " The NERDTree is a file system explorer for the Vim editor.
-Plugin 'ctrlpvim/ctrlp.vim'                        " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-Plugin 'daylerees/colour-schemes', {'rtp': 'vim/'} " Color schem pack see options in http://daylerees.github.io/
+Plugin 'Xuyuanp/nerdtree-git-plugin'               " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
+Plugin 'airblade/vim-gitgutter'                    " A Vim plugin which shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
 Plugin 'jg/bufexplorer'                            " Vim bufexplorer plugin
 Plugin 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
 Plugin 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
@@ -11,6 +13,7 @@ Plugin 'vim-syntastic/syntastic'                   " Syntax checking hacks for v
 Plugin 'vim-scripts/Gundo'                         " Vim plugin to visualize your Vim undo tree.
 Plugin 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim plugins such as: NERDTree
 Plugin 'mileszs/ack.vim'                           " Vim plugin for the Perl module / CLI script 'ack'. More info: github.com/mileszs/ack.vim#possibly-faq
+Plugin 'terryma/vim-multiple-cursors'              " True Sublime Text style multiple selections for Vim
 " ================================
 " Snippets Packs
 " ================================
@@ -30,6 +33,7 @@ Plugin 'jpo/vim-railscasts-theme'
 Plugin 'rakr/vim-one'
 Plugin 'sickill/vim-monokai'
 Plugin 'mhinz/vim-janah'
+Plugin 'morhetz/gruvbox'
 
 
 " Extras
@@ -38,5 +42,14 @@ Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses
 Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
 Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
 
-" Maybe in future use https://github.com/Shougo/defx.nvim
+" Pack to convert vim in VSCode
+" Maybe in future use
+" - https://github.com/Shougo/defx.nvim
+" - https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
+" - https://github.com/airblade/vim-gitgutter
+" - https://github.com/preservim/nerdcommenter
+" - https://github.com/christoomey/vim-tmux-navigator
+" - https://github.com/neoclide/coc.nvim (avaliar com calma)
+" - https://github.com/python-mode/python-mode (avaliar se vale a pena as chatices
+
 

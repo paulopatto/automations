@@ -10,7 +10,7 @@ Plugin 'Yggdroot/indentLine'                       " A vim plugin to display the
 Plugin 'vim-syntastic/syntastic'                   " Syntax checking hacks for vim
 Plugin 'vim-scripts/Gundo'                         " Vim plugin to visualize your Vim undo tree.
 Plugin 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim plugins such as: NERDTree
-
+Plugin 'mileszs/ack.vim'                           " Vim plugin for the Perl module / CLI script 'ack'. More info: github.com/mileszs/ack.vim#possibly-faq
 " ================================
 " Snippets Packs
 " ================================

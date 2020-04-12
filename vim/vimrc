@@ -532,3 +532,11 @@ map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 " > NOTE: For :clipboard need vim with +clipboard
 set clipboard=unnamedplus
 :silent exe "g:flog_enable"
+
+
+
+
+" FOR ackvim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif

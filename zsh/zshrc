@@ -94,7 +94,9 @@ export GITIGNORE=$HOME/.gitignore_global
 # Configs to ASDF-VM:
 [ -f $HOME/.asdf/asdf.sh ] && source $HOME/.asdf/asdf.sh
 [ -f $HOME/.asdf/completions/asdf.bash ] && source $HOME/.asdf/completions/asdf.bash
+
 # End of ASDF-VM
+
 
 source $HOME/.zsh/default-aliases.zsh
 
@@ -105,3 +107,4 @@ then
   export PATH=$HOME/miniconda3/bin:$PATH
 fi
 
+[ -f $HOME/.zsh/java.zsh ] && . $HOME/.zsh/java.zsh

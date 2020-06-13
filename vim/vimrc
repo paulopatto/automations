@@ -540,3 +540,21 @@ set clipboard=unnamedplus
 if executable('ag')
   let g:ackprg = 'ag --vimgrep'
 endif
+
+
+" FOR LSC dart autocomplete
+let g:lsc_auto_map = v:true
+
+" The default keymaps of vim-lsc are:
+
+" * 'GoToDefinition': <C-]>,
+" * 'GoToDefinitionSplit': [<C-W>], <C-W><C-]>],
+" * 'FindReferences': gr,
+" * 'NextReference': <C-n>,
+" * 'PreviousReference': <C-p>,
+" * 'FindImplementations': gI,
+" * 'FindCodeActions': ga,
+" * 'Rename': gR,
+" * 'DocumentSymbol': go,
+" * 'WorkspaceSymbol': gS,
+" * 'SignatureHelp': gm,

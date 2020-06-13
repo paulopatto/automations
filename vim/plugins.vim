@@ -44,6 +44,10 @@ Plugin 'janko/vim-test'                            " A Vim wrapper for running t
 Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
 
 " Pack to convert vim in VSCode
+Plugin 'natebosch/vim-lsc'                         " Adds language-aware tooling to vim by communicating with a language server following
+                                                   " the [language server protocol](https://github.com/Microsoft/language-server-protocol).
+                                                   " For more information see langserver.org.
+Plugin 'natebosch/vim-lsc-dart'                    " vim-lsc server configuration for the Dart language
 " Maybe in future use
 " - https://github.com/Shougo/defx.nvim
 " - https://github.com/tiagofumo/vim-nerdtree-syntax-highlight

@@ -41,7 +41,10 @@ Plugin 'elixir-editors/vim-elixir'                 " Elixir support for vim
 Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses ElixirSense to give inside information about your project.
 Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
 Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
+
+"" Flutter support
 Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
+Plugin 'thosakwe/vim-flutter'                      " Vim comds for Flutter, including hot-reload-on-save & more.
 
 " Pack to convert vim in VSCode
 Plugin 'natebosch/vim-lsc'                         " Adds language-aware tooling to vim by communicating with a language server following

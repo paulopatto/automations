@@ -44,6 +44,7 @@ Plugin 'janko/vim-test'                            " A Vim wrapper for running t
 Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
 
 " Pack to convert vim in VSCode
+Plugin 'neoclide/coc.nvim'                         " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
 Plugin 'natebosch/vim-lsc'                         " Adds language-aware tooling to vim by communicating with a language server following
                                                    " the [language server protocol](https://github.com/Microsoft/language-server-protocol).
                                                    " For more information see langserver.org.

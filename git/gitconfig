@@ -1,12 +1,23 @@
 # vim: ft=gitconfig
 # ~/.gitconfig
 [user]
-  name  = Paulo Patto
-  email = paulopatto@paulopatto.com
+  name        = Paulo Patto
+  email       = paulopatto@paulopatto.com
+  username    = paulopatto
   #signingkey = 58ACE7E2A09E6305
   #signingkey = 1A30B4148727CC84
   #signingkey = DA7023059404E4BE
   signingkey  = EF8224370522AB2D
+  #TODO: Em busca de uma forma de setar isso de forma dinamica:
+  # GPG_SIGNING_KEY=$(gpg --list-keys  --with-colons paulopatto@paulopatto.com | grep pub | cut -d':' -f 5)
+
+[core]
+  excludesfile = ~/.gitignore_global
+  editor       = vim
+
+[github]
+  user  = paulopatto
+  #token =
 
 # Usar esse se precisar substituir as chamadas 'git://' por 'https://'
 #[url "https://"]
@@ -17,9 +28,6 @@
 
 [url]
 # git config --global url.'https://'.insteadOf 'git://'
-
-[github]
-  user = paulopatto
 
 [push]
   default = matching # simple | current | matching
@@ -39,10 +47,6 @@
   meta = yellow bold
   frag = magenta bold
   new  = green bold
-
-[core]
-  excludesfile = ~/.gitignore_global
-  editor       = vim
 
 [grep]
   linenumber = true

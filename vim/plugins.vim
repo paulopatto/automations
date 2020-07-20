@@ -34,6 +34,7 @@ Plugin 'rakr/vim-one'
 Plugin 'sickill/vim-monokai'
 Plugin 'mhinz/vim-janah'
 Plugin 'morhetz/gruvbox'
+Plugin 'dracula/vim'
 
 
 " Extras

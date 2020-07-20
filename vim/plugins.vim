@@ -5,7 +5,7 @@ Plugin 'godlygeek/csapprox'                        " Required by 'tpope/vim-fugi
 Plugin 'tpope/vim-fugitive'                        " A Git wrapper so awesome
 Plugin 'scrooloose/nerdtree'                       " The NERDTree is a file system explorer for the Vim editor.
 Plugin 'Xuyuanp/nerdtree-git-plugin'               " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
-Plugin 'airblade/vim-gitgutter'                    " A Vim plugin which shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
+Plugin 'airblade/vim-gitgutter'                    " A Vim plugin which shows a git diff in the sign column and stages/previews/undoes/hunks.
 Plugin 'jg/bufexplorer'                            " Vim bufexplorer plugin
 Plugin 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
 Plugin 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines

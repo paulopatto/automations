@@ -11,6 +11,7 @@ alias tmuxconfig="$EDITOR $HOME/.tmux.conf"
 alias gitconfig="$EDITOR $HOME/.gitconfig"
 alias vimconfig="$EDITOR $HOME/.vim/vimrc"
 alias zshconfig="$EDITOR $HOME/.zsh/zshrc"
+[ -x "$(command -v vimx)" ] && alias vim="vimx";
 
 ###############
 # ssh

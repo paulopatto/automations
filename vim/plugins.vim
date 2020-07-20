@@ -35,6 +35,7 @@ Plugin 'sickill/vim-monokai'
 Plugin 'mhinz/vim-janah'
 Plugin 'morhetz/gruvbox'
 Plugin 'dracula/vim'
+Plugin 'doums/darcula'
 
 
 " Extras

@@ -193,14 +193,24 @@ if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme molokai
+    if empty($VIM_COLORSCHEME)
+      colorscheme molokai
+    else
+      set background=dark
+      colorscheme $VIM_COLORSCHEME
+    end
     set guitablabel=%M%t
     set lines=40
     set columns=115
 
     if has("gui_gnome")
         set term=gnome-256color
-        colorscheme molokai
+        if empty($VIM_COLORSCHEME)
+          colorscheme molokai
+        else
+          set background=dark
+          colorscheme $VIM_COLORSCHEME
+        end
         set guifont=Monospace\ Bold\ 12
     endif
 
@@ -218,11 +228,21 @@ else
     let g:CSApprox_loaded = 1
 
     if $COLORTERM == 'gnome-terminal'
-        set term=gnome-256color
+      set term=gnome-256color
+      if empty($VIM_COLORSCHEME)
         colorscheme molokai
+      else
+        set background=dark
+        colorscheme $VIM_COLORSCHEME
+      end
     else
       set term=xterm-256color
-      colorscheme molokai
+      if empty($VIM_COLORSCHEME)
+        colorscheme molokai
+      else
+        set background=dark
+        colorscheme $VIM_COLORSCHEME
+      end
     endif
 endif
 

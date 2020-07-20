@@ -47,6 +47,7 @@ Plugin 'hashivim/vim-terraform'                    " Terraform support for vim
 Plugin 'juliosueiras/vim-terraform-completion'     " Terraform Completion with Linter
 
 " Pack to convert vim in VSCode
+" SEE https://github.com/iamcco/coc-flutter
 Plugin 'neoclide/coc.nvim'                         " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
 Plugin 'natebosch/vim-lsc'                         " Adds language-aware tooling to vim by communicating with a language server following
                                                    " the [language server protocol](https://github.com/Microsoft/language-server-protocol).

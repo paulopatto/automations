@@ -38,9 +38,9 @@ Plugin 'dracula/vim'
 
 
 " Extras
+Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
 Plugin 'elixir-editors/vim-elixir'                 " Elixir support for vim
 Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses ElixirSense to give inside information about your project.
-Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
 Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
 Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
 

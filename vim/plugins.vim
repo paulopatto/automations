@@ -43,6 +43,8 @@ Plugin 'elixir-editors/vim-elixir'                 " Elixir support for vim
 Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses ElixirSense to give inside information about your project.
 Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
 Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
+Plugin 'hashivim/vim-terraform'                    " Terraform support for vim
+Plugin 'juliosueiras/vim-terraform-completion'     " Terraform Completion with Linter
 
 " Pack to convert vim in VSCode
 Plugin 'neoclide/coc.nvim'                         " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode

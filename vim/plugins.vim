@@ -5,7 +5,7 @@ Plugin 'godlygeek/csapprox'                        " Required by 'tpope/vim-fugi
 Plugin 'tpope/vim-fugitive'                        " A Git wrapper so awesome
 Plugin 'scrooloose/nerdtree'                       " The NERDTree is a file system explorer for the Vim editor.
 Plugin 'Xuyuanp/nerdtree-git-plugin'               " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
-Plugin 'airblade/vim-gitgutter'                    " A Vim plugin which shows a git diff in the sign column and stages/previews/undoes hunks and partial hunks.
+Plugin 'airblade/vim-gitgutter'                    " A Vim plugin which shows a git diff in the sign column and stages/previews/undoes/hunks.
 Plugin 'jg/bufexplorer'                            " Vim bufexplorer plugin
 Plugin 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
 Plugin 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
@@ -34,23 +34,21 @@ Plugin 'rakr/vim-one'
 Plugin 'sickill/vim-monokai'
 Plugin 'mhinz/vim-janah'
 Plugin 'morhetz/gruvbox'
+Plugin 'dracula/vim'
 
 
 " Extras
+Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
 Plugin 'elixir-editors/vim-elixir'                 " Elixir support for vim
 Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses ElixirSense to give inside information about your project.
-Plugin 'neomake/neomake'                           " Asynchronous linting and make framework for Neovim/Vim
 Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
 
-"" Flutter support
-Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
-Plugin 'thosakwe/vim-flutter'                      " Vim comds for Flutter, including hot-reload-on-save & more.
-
 " Pack to convert vim in VSCode
+" SEE https://github.com/iamcco/coc-flutter
+Plugin 'neoclide/coc.nvim'                         " Intellisense engine for Vim8 & Neovim, full language server protocol support as VSCode
 Plugin 'natebosch/vim-lsc'                         " Adds language-aware tooling to vim by communicating with a language server following
                                                    " the [language server protocol](https://github.com/Microsoft/language-server-protocol).
                                                    " For more information see langserver.org.
-Plugin 'natebosch/vim-lsc-dart'                    " vim-lsc server configuration for the Dart language
 " Maybe in future use
 " - https://github.com/Shougo/defx.nvim
 " - https://github.com/tiagofumo/vim-nerdtree-syntax-highlight
@@ -60,4 +58,12 @@ Plugin 'natebosch/vim-lsc-dart'                    " vim-lsc server configuratio
 " - https://github.com/neoclide/coc.nvim (avaliar com calma)
 " - https://github.com/python-mode/python-mode (avaliar se vale a pena as chatices
 
+"" Flutter support
+Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, syntax highlight, and indention
+Plugin 'thosakwe/vim-flutter'                      " Vim comds for Flutter, including hot-reload-on-save & more.
+Plugin 'natebosch/vim-lsc-dart'                    " vim-lsc server configuration for the Dart language
+
+"" Terraform support
+Plugin 'hashivim/vim-terraform'                    " Terraform support for vim
+Plugin 'juliosueiras/vim-terraform-completion'     " Terraform Completion with Linter
 

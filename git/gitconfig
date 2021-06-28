@@ -63,3 +63,5 @@
   l     = "log --graph --topo-order  --pretty=format:'%C(yellow)%H%C(red)%d%n%C(reset)%C(blue)%an <%ae>%n%C(cyan)%aD (%ar)%C(reset)%n%+B'"
   lg    = "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative"
   graph = "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative"
+[init]
+	defaultBranch = main

@@ -43,6 +43,7 @@ Plugin 'neomake/neomake'                           " Asynchronous linting and ma
 Plugin 'elixir-editors/vim-elixir'                 " Elixir support for vim
 Plugin 'slashmili/alchemist.vim'                   " Elixir Integration. It uses ElixirSense to give inside information about your project.
 Plugin 'janko/vim-test'                            " A Vim wrapper for running tests on different granularities.
+Plugin 'prettier/vim-prettier'                     " A vim plugin wrapper for https://prettier.io, pre-configured with custom default prettier settings.
 
 " Pack to convert vim in VSCode
 " SEE https://github.com/iamcco/coc-flutter
@@ -64,7 +65,8 @@ Plugin 'dart-lang/dart-vim-plugin'                 " Support dart filetype, synt
 Plugin 'thosakwe/vim-flutter'                      " Vim comds for Flutter, including hot-reload-on-save & more.
 Plugin 'natebosch/vim-lsc-dart'                    " vim-lsc server configuration for the Dart language
 
-"" Terraform support
+"" Infra support
 Plugin 'hashivim/vim-terraform'                    " Terraform support for vim
 Plugin 'juliosueiras/vim-terraform-completion'     " Terraform Completion with Linter
-
+Plugin 'haproxy'                                   " HAProxy sintaxe
+Plugin 'Glench/Vim-Jinja2-Syntax'                  " Jinja2 syntax highlighting

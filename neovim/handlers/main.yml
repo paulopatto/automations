@@ -1,0 +1,4 @@
+---
+- name: nvim_plug_install
+  command: /usr/bin/nvim +'PlugInstall --sync' +qa
+

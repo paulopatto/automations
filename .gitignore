@@ -7,3 +7,7 @@ ansible/.vagrant/
 resources/vaultpass
 *.zwc
 zsh/antigen.zsh
+*.swp
+*.swo
+.vagrant/*
+neovim/.vagrant/

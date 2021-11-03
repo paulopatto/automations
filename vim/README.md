@@ -10,14 +10,14 @@ O vim (VI Impoved) é uma melhoria do editor de textos VI e está presente em to
 
 ### CTAGS tip
 
-> Refs.: 
+> Refs.:
 > * http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 
 - `Ctrl+]` - go to definition
 - `Ctrl+T` - Jump back from the definition.
 - `Ctrl+W`|`Ctrl+]` - Open the definition in a horizontal split
 
-Configs to add in `.vimrc` 
+Configs to add in `.vimrc`
 
 ```vim
 " With this config enable
@@ -58,4 +58,20 @@ Add tags to `.gitignore`
 
 - [README](https://github.com/terryma/vim-multiple-cursors/blob/master/README.md)
 
+## Features
 
+- [ ] Gerenciador de plugins [vim-plug](https://github.com/junegunn/vim-plug)
+- [ ] Sintaxe Highlight [Polyglot](https://github.com/sheerun/vim-polyglot)
+- [ ] Barra de navegação com [NERDTree](https://github.com/preservim/nerdtree)
+- [ ] Barra inferios com vim-airline
+- [ ] Aucomplete com [CoC.vim](https://github.com/neoclide/coc.nvim)
+- [ ] Analisador de códigos com [ALE](https://github.com/dense-analysis/ale)
+- [ ] [Coloresque](https://github.com/gko/vim-coloresque) para destaque de cores em arquivos CSS
+- [ ] Icones pelo [vim devicons](https://github.com/ryanoasis/vim-devicons)
+- [ ] Destaque de identação pelo [vim IndentGuides](https://dev.tothaerkh/vim-indentguides)
+- [ ] [Lexima.vim](https://github.com/cohama/lexima.vim) para fechar aspas e parenteses
+- [ ] https://github.com/jbyuki/instant.nvim
+
+Ref.: https://dev.to/edersonferreira/criando-um-ambiente-de-desenvolvimento-com-vim-neovim-42
+https://vimawesome.com/
+https://github.com/rockerBOO/awesome-neovim

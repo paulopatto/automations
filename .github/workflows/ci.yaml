@@ -7,9 +7,11 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+
       - name: Install nodejs 14
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+
       - run: npm install -g bats
       - run: bats test/*.bats

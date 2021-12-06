@@ -1,0 +1,16 @@
+name: "Build paulopatto/dotfiles w/ Ansible"
+on: [push] #https://docs.github.com/pt/actions/learn-github-actions/events-that-trigger-workflows
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Install nodejs 14
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - run: npm install -g bats
+      - run: bats test/*.bats

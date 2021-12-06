@@ -10,4 +10,3 @@ zsh/antigen.zsh
 *.swp
 *.swo
 .vagrant/*
-neovim/.vagrant/

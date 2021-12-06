@@ -11,6 +11,3 @@ jobs:
         uses: ansible/ansible-lint-action@master
         with:
           targets: "bootstrap.yaml"
-        inventory: |
-          [all]
-          localhost

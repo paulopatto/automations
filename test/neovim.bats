@@ -1,8 +1,6 @@
 #!/usr/bin/env bats
 # vim: set ft=sh :
 
-load 'bats_helper'
-
 @test "Assert neovim autoload directory" {
   assert [ -d $HOME/.local/share/nvim/site/autoload ]
 }

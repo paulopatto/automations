@@ -3,6 +3,7 @@ on: [push] #https://docs.github.com/pt/actions/learn-github-actions/events-that-
 jobs:
   build:
     runs-on: ubuntu-latest
+    needs: lint
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2

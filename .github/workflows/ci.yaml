@@ -1,5 +1,4 @@
 name: "Build paulopatto/dotfiles w/ Ansible"
-description: "Collection of scripts to config my laptops and machines"
 on: [push] #https://docs.github.com/pt/actions/learn-github-actions/events-that-trigger-workflows
 jobs:
   tests:

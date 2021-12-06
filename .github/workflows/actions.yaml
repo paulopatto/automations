@@ -2,17 +2,7 @@ name: "Build paulopatto/dotfiles w/ Ansible"
 description: "Collection of scripts to config my laptops and machines"
 
 # https://docs.github.com/pt/actions/learn-github-actions/events-that-trigger-workflows
-on:
-  push:
-    branches:
-      - master
-      - main
-  pull_request:
-    branches:
-      - master
-      - main
-  pull_request_review:
-    types: [edited, dismissed]
+on: [push, pull_request]
 
 
 jobs:

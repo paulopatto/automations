@@ -6,19 +6,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint-action@master
         targets:
           - bootstrap.yaml
-
-  # build:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Checkout repo
-  #       uses: actions/checkout@v2
-
-  #     - name: Run playbook
-  #       uses: dawidd6/action-ansible-playbook@v2
-  #       with:
-  #         playbook: bootstrap.yaml
-

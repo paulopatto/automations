@@ -4,22 +4,22 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v2
-
       - name: Install nodejs 14
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - run: npm install -g bats
+      - run: npm install -g bats-assert
+      - run: npm install -g bats-support
+      - run: npm install -g bats-file@git+https://github.com/bats-core/bats-file.git
 
-      - name: Run playbook
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Run playbook to build
         uses: dawidd6/action-ansible-playbook@v2
         with:
           playbook: bootstrap.yaml
 
-      - run: npm install -g bats
-      - run: npm install -g bats-assert
-      - run: npm install -g bats-support
-      - run: npm install -g bats-file@git+https://github.com/bats-core/bats-file.git#0.3.0
       - run: bats test/*.bats
 

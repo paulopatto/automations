@@ -19,5 +19,7 @@ jobs:
 
       - run: npm install -g bats
       - run: npm install -g bats-assert
+      - run: npm install -g bats-support
+      - run: npm install -g bats-file@git+https://github.com/bats-core/bats-file.git#0.3.0
       - run: bats test/*.bats
 

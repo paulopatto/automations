@@ -11,6 +11,8 @@ on:
     branches:
       - master
       - main
+  pull_request_review:
+    types: [edited, dismissed]
 
 
 jobs:

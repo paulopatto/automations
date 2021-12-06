@@ -9,5 +9,5 @@ jobs:
 
       - name: Lint Ansible Playbook
         uses: ansible/ansible-lint-action@master
-        targets:
-          - bootstrap.yaml
+        with:
+          targets: "bootstrap.yaml"

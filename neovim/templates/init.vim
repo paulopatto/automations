@@ -41,6 +41,7 @@ Plug 'jg/bufexplorer'                            " Vim bufexplorer plugin
 Plug 'terryma/vim-multiple-cursors'              " True Sublime Text style multiple selections for Vim
 Plug 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
 Plug 'kevinoid/vim-jsonc'                        " Vim syntax highlighting plugin for JSON with C-style line (//) and block (/* */) comments.
+Plug 'dense-analysis/ale'                        " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
                                                  " Install extensions for programming languages you use daily:
                                                  " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#install-extensions-for-programming-languages-you-use-daily

@@ -62,7 +62,17 @@ Plug 'dracula/vim', { 'as': 'dracula' }          " A dark theme for Vim, Zsh and
 Plug 'altercation/vim-colors-solarized'          " Solarized Colorscheme for Vim Description by Awesome-VIM
 Plug 'nanotech/jellybeans.vim'                   " A colorful, dark color scheme, inspired by ir_black and twilight
 Plug 'severij/vadelma'                           " Super sexy Vim/Neovim color scheme for GUIs and 256-color terminals.
+Plug 'preservim/vim-colors-pencil'               " Light (& dark) color scheme inspired by iA Writer
 
+
+" ====================================
+" *****    Language Supports     *****
+" ====================================
+
+" *** JavaScript & Tyescript and React ***
+Plug 'mlaursen/vim-react-snippets'               " Useful snippets for developing in React (Javascript and Typescript)
+
+" *** HTML & CSS ***
 
 call plug#end()
 

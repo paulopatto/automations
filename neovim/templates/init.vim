@@ -31,6 +31,8 @@ call plug#begin()
 
 Plug 'sheerun/vim-polyglot'                      " Package to syntax highlight
 Plug 'preservim/nerdtree'                        " file system explorer
+Plug 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim plugins such as: NERDTree
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " Extra syntax and highlight for nerdtree files require: https://github.com/ryanoasis/nerd-fonts
 Plug 'vim-airline/vim-airline'                   " status/tabline
 Plug 'vim-airline/vim-airline-themes'            " themes to status/tabline
 Plug 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines

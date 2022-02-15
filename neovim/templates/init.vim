@@ -35,7 +35,11 @@ Plug 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim p
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " Extra syntax and highlight for nerdtree files require: https://github.com/ryanoasis/nerd-fonts
 Plug 'vim-airline/vim-airline'                   " status/tabline
 Plug 'vim-airline/vim-airline-themes'            " themes to status/tabline
-Plug 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
+"Plug 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
+Plug 'thaerkh/vim-indentguides'                  " Simple indentation guides for your buffers
+Plug 'jg/bufexplorer'                            " Vim bufexplorer plugin
+Plug 'terryma/vim-multiple-cursors'              " True Sublime Text style multiple selections for Vim
+Plug 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
 Plug 'kevinoid/vim-jsonc'                        " Vim syntax highlighting plugin for JSON with C-style line (//) and block (/* */) comments.
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
                                                  " Install extensions for programming languages you use daily:

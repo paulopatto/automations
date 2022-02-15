@@ -22,6 +22,10 @@ Ref.: https://dev.to/edersonferreira/criando-um-ambiente-de-desenvolvimento-com-
 https://vimawesome.com/
 https://github.com/rockerBOO/awesome-neovim
 
+## Running
+
+`ansible-playbook --connection=local --inventory 127.0.0.1, neovim-playbook.yaml -K`
+
 Requirements
 ------------
 

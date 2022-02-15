@@ -33,6 +33,12 @@ Plug 'sheerun/vim-polyglot'                      " Package to syntax highlight
 Plug 'preservim/nerdtree'                        " file system explorer
 Plug 'vim-airline/vim-airline'                   " status/tabline
 Plug 'vim-airline/vim-airline-themes'            " themes to status/tabline
+Plug 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
+Plug 'kevinoid/vim-jsonc'                        " Vim syntax highlighting plugin for JSON with C-style line (//) and block (/* */) comments.
+Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
+                                                 " Install extensions for programming languages you use daily:
+                                                 " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#install-extensions-for-programming-languages-you-use-daily
+Plug 'github/copilot.vim'                        " Neovim plugin for GitHub Copilot
 
 " ================================
 " *****    Color Schemes     *****
@@ -49,6 +55,7 @@ Plug 'dracula/vim', { 'as': 'dracula' }          " A dark theme for Vim, Zsh and
 Plug 'altercation/vim-colors-solarized'          " Solarized Colorscheme for Vim Description by Awesome-VIM
 Plug 'nanotech/jellybeans.vim'                   " A colorful, dark color scheme, inspired by ir_black and twilight
 Plug 'severij/vadelma'                           " Super sexy Vim/Neovim color scheme for GUIs and 256-color terminals.
+
 
 call plug#end()
 
@@ -70,3 +77,9 @@ let g:airline#extensions#tabline#show_buffers            = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type             = 1
 let g:airline_theme                                      ='powerlineish'
+
+
+" ----------------------------
+" - jsonc filetype detection -
+" ----------------------------
+autocmd BufRead,BufNewFile *.mycjson set filetype=jsonc

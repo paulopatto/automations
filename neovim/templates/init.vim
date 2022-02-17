@@ -13,7 +13,7 @@ set wildmode=longest,list   " get bash-like tab completions
 set mouse=v                 " middle-click paste with
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
-set backupdir=~/.cache/vim " Directory to store backup files.
+set backupdir=~/.cache/vim  " Directory to store backup files.
 
 set expandtab               " converts tabs to white space
 set tabstop=2               " number of columns occupied by a tab
@@ -22,6 +22,11 @@ set shiftwidth=2            " width for autoindents
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 
+"key mapping for window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 call plug#begin()
 
@@ -40,6 +45,10 @@ Plug 'thaerkh/vim-indentguides'                  " Simple indentation guides for
 Plug 'jg/bufexplorer'                            " Vim bufexplorer plugin
 Plug 'terryma/vim-multiple-cursors'              " True Sublime Text style multiple selections for Vim
 Plug 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
+Plug 'tpope/vim-fugitive'                        " A Git wrapper so awesome
+Plug 'tpope/vim-surround'                        " by https://vimawesome.com/plugin/surround-vim
+Plug 'preservim/nerdcommenter'                   " Comment functions so powerful—no comment necessary.
+Plug 'Xuyuanp/nerdtree-git-plugin'               " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
 Plug 'kevinoid/vim-jsonc'                        " Vim syntax highlighting plugin for JSON with C-style line (//) and block (/* */) comments.
 Plug 'dense-analysis/ale'                        " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
@@ -51,18 +60,18 @@ Plug 'github/copilot.vim'                        " Neovim plugin for GitHub Copi
 " *****    Color Schemes     *****
 " ================================
 
-Plug 'tomasiser/vim-code-dark'
-Plug 'jpo/vim-railscasts-theme'
-Plug 'rakr/vim-one'
-Plug 'sickill/vim-monokai'
-Plug 'mhinz/vim-janah'
-Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'          " Solarized Colorscheme for Vim Description by Awesome-VIM
 Plug 'doums/darcula'
 Plug 'dracula/vim', { 'as': 'dracula' }          " A dark theme for Vim, Zsh and many more.
-Plug 'altercation/vim-colors-solarized'          " Solarized Colorscheme for Vim Description by Awesome-VIM
+Plug 'jpo/vim-railscasts-theme'
+Plug 'mhinz/vim-janah'
+Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'                   " A colorful, dark color scheme, inspired by ir_black and twilight
-Plug 'severij/vadelma'                           " Super sexy Vim/Neovim color scheme for GUIs and 256-color terminals.
 Plug 'preservim/vim-colors-pencil'               " Light (& dark) color scheme inspired by iA Writer
+Plug 'rakr/vim-one'
+Plug 'severij/vadelma'                           " Super sexy Vim/Neovim color scheme for GUIs and 256-color terminals.
+Plug 'sickill/vim-monokai'
+Plug 'tomasiser/vim-code-dark'
 
 
 " ====================================
@@ -119,3 +128,4 @@ endfunction
 
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+

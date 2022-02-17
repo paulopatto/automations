@@ -1,4 +1,5 @@
 ---
 - name: nvim_plug_install
-  command: /usr/bin/nvim +'PlugInstall --sync' +'Coc-Install coc-json coc-tsserver coc-css coc-html coc-ruby coc-pyright' +':Copilot setup' +qa
+  command: /usr/bin/nvim "+silent! PlugInstall! --sync" +qall!
 
+  # command: /usr/bin/nvim +'PlugInstall --sync' +'Coc-Install coc-json coc-tsserver coc-css coc-html coc-ruby coc-pyright coc-tailwindcss coc-solargraph' +':Copilot setup' +qa

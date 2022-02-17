@@ -10,14 +10,14 @@ O vim (VI Impoved) é uma melhoria do editor de textos VI e está presente em to
 
 ### CTAGS tip
 
-> Refs.: 
+> Refs.:
 > * http://stackoverflow.com/questions/563616/vim-and-ctags-tips-and-tricks
 
 - `Ctrl+]` - go to definition
 - `Ctrl+T` - Jump back from the definition.
 - `Ctrl+W`|`Ctrl+]` - Open the definition in a horizontal split
 
-Configs to add in `.vimrc` 
+Configs to add in `.vimrc`
 
 ```vim
 " With this config enable
@@ -57,5 +57,4 @@ Add tags to `.gitignore`
 ## Multiple cursor
 
 - [README](https://github.com/terryma/vim-multiple-cursors/blob/master/README.md)
-
 

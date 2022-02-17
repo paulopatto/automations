@@ -1,0 +1,7 @@
+---
+- hosts: all
+
+  handlers:
+    - import_tasks: handlers/main.yml
+  tasks:
+    - import_tasks: tasks/main.yml

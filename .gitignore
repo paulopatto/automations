@@ -9,4 +9,5 @@ resources/vaultpass
 *.zwc
 zsh/antigen.zsh
 *.swp
-.vagrant/
+*.swo
+.vagrant/*

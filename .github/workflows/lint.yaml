@@ -1,16 +1,13 @@
 name: "Build paulopatto/dotfiles w/ Ansible"
 on: [push] #https://docs.github.com/pt/actions/learn-github-actions/events-that-trigger-workflows
 jobs:
-  tests:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Install nodejs 14
-        uses: actions/setup-node@v2
+      - name: Lint Ansible Playbook
+        uses: ansible/ansible-lint-action@master
         with:
-          node-version: '14'
-
-      - run: npm install -g bats
-      - run: bats test/*.bats
+          targets: "bootstrap.yaml"

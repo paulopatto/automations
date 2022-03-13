@@ -29,6 +29,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+"map to bufexplorer
+nnoremap <leader>b :BufExplorer<cr>
+"map to bufergator
+let g:buffergator_suppress_keymaps = 1
+nnoremap <leader>bg :BuffergatorToggle<cr>
+
+
 call plug#begin()
 
 " ====================
@@ -43,6 +50,7 @@ Plug 'vim-airline/vim-airline'                   " status/tabline
 Plug 'vim-airline/vim-airline-themes'            " themes to status/tabline
 "Plug 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
 Plug 'thaerkh/vim-indentguides'                  " Simple indentation guides for your buffers
+Plug 'ctrlpvim/ctrlp.vim'                        " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
 Plug 'jg/bufexplorer'                            " Vim bufexplorer plugin
 Plug 'terryma/vim-multiple-cursors'              " True Sublime Text style multiple selections for Vim
 Plug 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
@@ -61,19 +69,19 @@ Plug 'github/copilot.vim'                        " Neovim plugin for GitHub Copi
 " *****    Color Schemes     *****
 " ================================
 
-Plug 'Mangeshrex/uwu.vim'                        " A beautiful and dark vim colorscheme. 
+Plug 'Mangeshrex/uwu.vim'                        " A beautiful and dark vim colorscheme.
 Plug 'altercation/vim-colors-solarized'          " Solarized Colorscheme for Vim Description by Awesome-VIM
-Plug 'arcticicestudio/nord-vim'                  " An arctic, north-bluish clean and elegant Vim theme. 
+Plug 'arcticicestudio/nord-vim'                  " An arctic, north-bluish clean and elegant Vim theme.
 Plug 'arzg/vim-colors-xcode'                     " Xcode 11’s dark and light colourschemes for Vim
-Plug 'chriskempson/base16-vim'                   " Base16 for Vim 
+Plug 'chriskempson/base16-vim'                   " Base16 for Vim
 Plug 'cormacrelf/vim-colors-github'              " A Vim colorscheme based on Github's syntax highlighting as of 2018.
 Plug 'daylerees/colour-schemes'                  " Color schem pack see options in http://daylerees.github.io/
 Plug 'doums/darcula'
 Plug 'dracula/vim', { 'as': 'dracula' }          " A dark theme for Vim, Zsh and many more.
-Plug 'drewtempelmeyer/palenight.vim'             " Soothing color scheme for your favorite [best] text editor 
-Plug 'gosukiwi/vim-atom-dark'                    " A vim theme inspired by Atom's default dark theme 
-Plug 'jaredgorski/SpaceCamp'                     " Vim colors for the final frontier 
-Plug 'joshdick/onedark.vim'                      " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme. 
+Plug 'drewtempelmeyer/palenight.vim'             " Soothing color scheme for your favorite [best] text editor
+Plug 'gosukiwi/vim-atom-dark'                    " A vim theme inspired by Atom's default dark theme
+Plug 'jaredgorski/SpaceCamp'                     " Vim colors for the final frontier
+Plug 'joshdick/onedark.vim'                      " A dark Vim/Neovim color scheme inspired by Atom's One Dark syntax theme.
 Plug 'jpo/vim-railscasts-theme'
 Plug 'kaicataldo/material.vim'                   " A port of the Material color scheme for Vim/Neovim
 Plug 'mhinz/vim-janah'
@@ -81,11 +89,11 @@ Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'                   " A colorful, dark color scheme, inspired by ir_black and twilight
 Plug 'preservim/vim-colors-pencil'               " Light (& dark) color scheme inspired by iA Writer
 Plug 'rakr/vim-one'
-Plug 'romgrk/doom-one.vim'                       " A dark colorschme for vim, ported from doom-emacs' doom-one theme. 
-Plug 'sainnhe/sonokai'                           " High Contrast & Vivid Color Scheme based on Monokai Pro 
+Plug 'romgrk/doom-one.vim'                       " A dark colorschme for vim, ported from doom-emacs' doom-one theme.
+Plug 'sainnhe/sonokai'                           " High Contrast & Vivid Color Scheme based on Monokai Pro
 Plug 'severij/vadelma'                           " Super sexy Vim/Neovim color scheme for GUIs and 256-color terminals.
 Plug 'sickill/vim-monokai'
-Plug 'sonph/onehalf'                             " Clean, vibrant and pleasing color schemes for Vim, gnome-terminal and more. 
+Plug 'sonph/onehalf'                             " Clean, vibrant and pleasing color schemes for Vim, gnome-terminal and more.
 Plug 'tomasiser/vim-code-dark'
 Plug 'tomasr/molokai'                            " Molokai color scheme for Vim
 

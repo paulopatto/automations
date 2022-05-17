@@ -15,6 +15,8 @@ set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 set backupdir=~/.cache/vim  " Directory to store backup files.
 set background=dark
+set foldmethod=syntax
+set foldlevelstart=5
 
 set expandtab               " converts tabs to white space
 set tabstop=2               " number of columns occupied by a tab

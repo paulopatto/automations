@@ -123,7 +123,7 @@ nnoremap <leader>n :NERDTreeFocus<CR>   " [\] + [n]
 nnoremap <leader>p :NERDTreeToggle<CR>  " [\] + [p]
 nnoremap <C-n>     :NERDTree<CR>        " [ctrl] + [n]
 nnoremap <C-f>     :NERDTreeFind<CR>    " [ctrl] + [f]
-
+" End nerdtree
 
 " ------------------------------
 " - vim-airline config section -
@@ -133,30 +133,30 @@ let g:airline#extensions#tabline#show_buffers            = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type             = 1
 let g:airline_theme                                      ='powerlineish'
-
+" End vim-airline
 
 " ----------------------------
 " - jsonc filetype detection -
 " ----------------------------
 autocmd BufRead,BufNewFile *.mycjson set filetype=jsonc
-"
+
 " -----------------------------
 " - Configs to CoC VIM plugin -
 " -----------------------------
 "  > source: https://dev.to/lissadev/criando-um-ambiente-de-desenvolvimento-com-vim-neovim-42
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-pyright', 'coc-solargraph', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-yank']
-
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-pyright', 'coc-solargraph', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-yank']
+"

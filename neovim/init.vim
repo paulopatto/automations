@@ -21,6 +21,7 @@ set foldlevelstart=5
 set expandtab               " converts tabs to white space
 set tabstop=2               " number of columns occupied by a tab
 set shiftwidth=2            " width for autoindents
+set softtabstop=2           " Number of spaces that a <Tab> counts for while performing editing operations
 
 filetype plugin indent on   "allow auto-indenting depending on file type
 syntax on                   " syntax highlighting

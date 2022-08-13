@@ -65,6 +65,7 @@ Plug 'thaerkh/vim-indentguides'                       " Simple indentation guide
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'        " Extra syntax and highlight for nerdtree files require: https://github.com/ryanoasis/nerd-fonts
 Plug 'tpope/vim-fugitive'                             " A Git wrapper so awesome
 Plug 'tpope/vim-surround'                             " by https://vimawesome.com/plugin/surround-vim
+Plug 'tpope/vim-markdown'                             " Vim Markdown runtime files
 Plug 'vim-airline/vim-airline'                        " status/tabline
 Plug 'vim-airline/vim-airline-themes'                 " themes to status/tabline
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " Ensure fzf
@@ -173,3 +174,13 @@ autocmd BufRead,BufNewFile *.mycjson set filetype=jsonc
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" Configs to vim-markdown
+" =======================
+" If you want to enable fenced code block syntax highlighting in your markdown documents you can enable it in your .vimrc like so:
+let g:markdown_fenced_languages = ['html', 'python', 'bash=sh']
+"To disable markdown syntax concealing add the following to your vimrc:
+let g:markdown_syntax_conceal = 0
+set concealcursor=n
+"Syntax highlight is synchronized in 50 lines. It may cause collapsed highlighting at large fenced code block. In the case, please set larger value in your vimrc:
+"let g:markdown_minlines = 100

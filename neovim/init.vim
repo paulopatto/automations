@@ -59,6 +59,8 @@ Plug 'preservim/nerdcommenter'                        " Comment functions so pow
 Plug 'preservim/nerdtree'                             " file system explorer
 Plug 'ryanoasis/vim-devicons'                         " Adds file type icons to Vim plugins such as: NERDTree
 Plug 'sheerun/vim-polyglot'                           " Package to syntax highlight
+Plug 'honza/vim-snippets'                             " vim-snipmate default snippets (Previously snipmate-snippets)
+Plug 'SirVer/ultisnips'                               " UltiSnips - The ultimate snippet solution for Vim.
 Plug 'thaerkh/vim-indentguides'                       " Simple indentation guides for your buffers
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'        " Extra syntax and highlight for nerdtree files require: https://github.com/ryanoasis/nerd-fonts
 Plug 'tpope/vim-fugitive'                             " A Git wrapper so awesome
@@ -164,3 +166,10 @@ autocmd BufRead,BufNewFile *.mycjson set filetype=jsonc
 "                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 "let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-pyright', 'coc-solargraph', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-yank']
 "
+
+" Trigger configuration. You need to change this to something other than <tab> if you use one of the following:
+" - https://github.com/Valloric/YouCompleteMe
+" - https://github.com/nvim-lua/completion-nvim
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

@@ -71,6 +71,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}       " Nodejs extension host fo
                                                       " Install extensions for programming languages you use daily:
                                                       " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#install-extensions-for-programming-languages-you-use-daily
 Plug 'jiangmiao/auto-pairs'                           " Vim plugin, insert or delete brackets, parens, quotes in pair
+Plug 'arjunmahishi/run-code.nvim'                     " A simple plugin to quickly run a snippet of code without ever leaving neovim
 Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' } "A vim plugin wrapper for prettier, pre-configured with custom default prettier settings.
 
 " ================================

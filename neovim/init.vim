@@ -70,6 +70,7 @@ Plug 'junegunn/fzf.vim'                               " fzf vim commands
 Plug 'neoclide/coc.nvim', {'branch': 'release'}       " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
                                                       " Install extensions for programming languages you use daily:
                                                       " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#install-extensions-for-programming-languages-you-use-daily
+Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' } "A vim plugin wrapper for prettier, pre-configured with custom default prettier settings.
 
 " ================================
 " *****    Color Schemes     *****

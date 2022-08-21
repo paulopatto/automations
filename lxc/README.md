@@ -25,18 +25,19 @@ mv $DOTFILES_HOME/lxc/default.conf $HOME/.config/lxc/default.config
 > 
 > `podman machine set --rootful`
 > 
-> API forwarding listening on: $HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock
+> API forwarding listening on: `$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock`
 > 
 > The system helper service is not installed; the default Docker API socket
 > address can't be used by podman. If you would like to install it run the
 > following commands:
 > 
+>   ```
 >   sudo /usr/local/Cellar/podman/4.2.0/bin/podman-mac-helper install
 >   podman machine stop; podman machine start
+>   ```
 > 
-> You can still connect Docker API clients by setting DOCKER_HOST using the
+> You can still connect Docker API clients by setting `DOCKER_HOST` using the
 > following command in your terminal session:
 > 
->   export DOCKER_HOST='unix://$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
+>   `export DOCKER_HOST='unix://$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock'`
 > 
-> Machine "podman-machine-default" started successfully

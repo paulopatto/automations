@@ -11,3 +11,4 @@ zsh/antigen.zsh
 *.swp
 *.swo
 .vagrant/*
+.vscode/

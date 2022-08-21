@@ -15,6 +15,8 @@ set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 set backupdir=~/.cache/vim  " Directory to store backup files.
 set background=dark
+set foldmethod=syntax
+set foldlevelstart=5
 
 set expandtab               " converts tabs to white space
 set tabstop=2               " number of columns occupied by a tab
@@ -42,28 +44,31 @@ call plug#begin()
 " == Plugin Section ==
 " ====================
 
-Plug 'sheerun/vim-polyglot'                      " Package to syntax highlight
-Plug 'preservim/nerdtree'                        " file system explorer
-Plug 'ryanoasis/vim-devicons'                    " Adds file type icons to Vim plugins such as: NERDTree
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'   " Extra syntax and highlight for nerdtree files require: https://github.com/ryanoasis/nerd-fonts
-Plug 'vim-airline/vim-airline'                   " status/tabline
-Plug 'vim-airline/vim-airline-themes'            " themes to status/tabline
-"Plug 'Yggdroot/indentLine'                       " A vim plugin to display the indention levels with thin vertical lines
-Plug 'thaerkh/vim-indentguides'                  " Simple indentation guides for your buffers
-Plug 'ctrlpvim/ctrlp.vim'                        " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
-Plug 'jg/bufexplorer'                            " Vim bufexplorer plugin
-Plug 'terryma/vim-multiple-cursors'              " True Sublime Text style multiple selections for Vim
-Plug 'danro/rename.vim'                          " Rename the current file in the vim buffer + retain relative path.
-Plug 'tpope/vim-fugitive'                        " A Git wrapper so awesome
-Plug 'tpope/vim-surround'                        " by https://vimawesome.com/plugin/surround-vim
-Plug 'preservim/nerdcommenter'                   " Comment functions so powerful—no comment necessary.
-Plug 'Xuyuanp/nerdtree-git-plugin'               " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
-Plug 'kevinoid/vim-jsonc'                        " Vim syntax highlighting plugin for JSON with C-style line (//) and block (/* */) comments.
-Plug 'dense-analysis/ale'                        " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
-Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
-                                                 " Install extensions for programming languages you use daily:
-                                                 " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#install-extensions-for-programming-languages-you-use-daily
-Plug 'github/copilot.vim'                        " Neovim plugin for GitHub Copilot
+Plug 'Xuyuanp/nerdtree-git-plugin'                    " A plugin of NERDTree showing git status flags. Works with the LATEST version of NERDTree.
+Plug 'Yggdroot/indentLine'                            " A vim plugin to display the indention levels with thin vertical lines
+Plug 'ctrlpvim/ctrlp.vim'                             " Full path fuzzy file, buffer, mru, tag, ... finder for Vim.
+Plug 'danro/rename.vim'                               " Rename the current file in the vim buffer + retain relative path.
+Plug 'dense-analysis/ale'                             " Check syntax in Vim asynchronously and fix files, with Language Server Protocol (LSP) support
+Plug 'github/copilot.vim'                             " Neovim plugin for GitHub Copilot
+Plug 'jg/bufexplorer'                                 " Vim bufexplorer plugin
+Plug 'kevinoid/vim-jsonc'                             " Vim syntax highlighting plugin for JSON with C-style line (//) and block (/* */) comments.
+Plug 'mbbill/undotree'                                " undoing things
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}   " Multiple cursors plugin for vim/neovim
+Plug 'preservim/nerdcommenter'                        " Comment functions so powerful—no comment necessary.
+Plug 'preservim/nerdtree'                             " file system explorer
+Plug 'ryanoasis/vim-devicons'                         " Adds file type icons to Vim plugins such as: NERDTree
+Plug 'sheerun/vim-polyglot'                           " Package to syntax highlight
+Plug 'thaerkh/vim-indentguides'                       " Simple indentation guides for your buffers
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'        " Extra syntax and highlight for nerdtree files require: https://github.com/ryanoasis/nerd-fonts
+Plug 'tpope/vim-fugitive'                             " A Git wrapper so awesome
+Plug 'tpope/vim-surround'                             " by https://vimawesome.com/plugin/surround-vim
+Plug 'vim-airline/vim-airline'                        " status/tabline
+Plug 'vim-airline/vim-airline-themes'                 " themes to status/tabline
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }   " Ensure fzf
+Plug 'junegunn/fzf.vim'                               " fzf vim commands
+Plug 'neoclide/coc.nvim', {'branch': 'release'}       " Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
+                                                      " Install extensions for programming languages you use daily:
+                                                      " https://github.com/neoclide/coc.nvim/wiki/Install-coc.nvim#install-extensions-for-programming-languages-you-use-daily
 
 " ================================
 " *****    Color Schemes     *****
@@ -118,7 +123,7 @@ nnoremap <leader>n :NERDTreeFocus<CR>   " [\] + [n]
 nnoremap <leader>p :NERDTreeToggle<CR>  " [\] + [p]
 nnoremap <C-n>     :NERDTree<CR>        " [ctrl] + [n]
 nnoremap <C-f>     :NERDTreeFind<CR>    " [ctrl] + [f]
-
+" End nerdtree
 
 " ------------------------------
 " - vim-airline config section -
@@ -128,30 +133,30 @@ let g:airline#extensions#tabline#show_buffers            = 1
 let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
 let g:airline#extensions#tabline#tab_nr_type             = 1
 let g:airline_theme                                      ='powerlineish'
-
+" End vim-airline
 
 " ----------------------------
 " - jsonc filetype detection -
 " ----------------------------
 autocmd BufRead,BufNewFile *.mycjson set filetype=jsonc
-"
+
 " -----------------------------
 " - Configs to CoC VIM plugin -
 " -----------------------------
 "  > source: https://dev.to/lissadev/criando-um-ambiente-de-desenvolvimento-com-vim-neovim-42
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-pyright', 'coc-solargraph', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-yank']
-
+"inoremap <silent><expr> <TAB>
+"      \ pumvisible() ? "\<C-n>" :
+"      \ <SID>check_back_space() ? "\<TAB>" :
+"      \ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"
+"
+"function! s:check_back_space() abort
+"  let col = col('.') - 1
+"  return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
+"
+"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+"                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+"let g:coc_global_extensions = ['coc-css', 'coc-emmet', 'coc-html', 'coc-json', 'coc-pyright', 'coc-solargraph', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-yank']
+"

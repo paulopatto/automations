@@ -25,6 +25,26 @@ podman machine init
 podman machine start
 ```
 
+The default machine is configured in rootless mode. If your containers
+require root permissions (e.g. ports < 1024), or if you run into compatibility
+issues with non-podman clients, you can switch using the following command: 
+
+```sh
+podman machine set --rootful
+```
+
+API forwarding listening on: `$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock`
+
+You can still connect Docker API clients by setting DOCKER_HOST using the
+following command in your terminal session:
+
+```sh
+export DOCKER_HOST='unix:///$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
+```
+
+
+
+
 ### Linux (fedora base)
 
 > Podman v4 will not be shipped officially on Fedora 35. 

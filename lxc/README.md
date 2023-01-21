@@ -42,6 +42,12 @@ following command in your terminal session:
 export DOCKER_HOST='unix:///$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock'
 ```
 
+or 
+
+```sh
+echo "export DOCKER_HOST='unix:///$HOME/.local/share/containers/podman/machine/podman-machine-default/podman.sock'" >> $HOME/.zshrc
+```
+
 
 
 

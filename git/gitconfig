@@ -4,16 +4,13 @@
   name        = Paulo Patto
   email       = paulopatto@paulopatto.com
   username    = paulopatto
-  #signingkey = 58ACE7E2A09E6305
-  #signingkey = 1A30B4148727CC84
-  #signingkey = DA7023059404E4BE
-  signingkey  = EF8224370522AB2D
+	signingkey  = 843426E31F1C9B0D2EB6DFC2BBF7A85CA3A15ED8
   #TODO: Em busca de uma forma de setar isso de forma dinamica:
   # GPG_SIGNING_KEY=$(gpg --list-keys  --with-colons paulopatto@paulopatto.com | grep pub | cut -d':' -f 5)
 
 [core]
   excludesfile = ~/.gitignore_global
-  editor       = vim
+  editor       = nvim
 
 [github]
   user  = paulopatto
@@ -65,3 +62,5 @@
   graph = "log --graph --all --pretty=format:'%Cred%h%Creset - %Cgreen(%cr)%Creset %s%C(yellow)%d%Creset' --abbrev-commit --date=relative"
 [init]
 	defaultBranch = main
+[commit]
+	gpgsign = true

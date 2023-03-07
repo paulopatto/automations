@@ -1,0 +1,4 @@
+pipenv
+requests
+pytest
+ipython

@@ -67,6 +67,8 @@ Install command to install Podman:
 sudo dnf -y install podman
 ```
 
+> INSTALL PODMAN COMPOSE
+> https://phoenixnap.com/kb/podman-compose#:~:text=What%20is%20Podman%20Compose%3F,in%20a%20single%20YAML%20file.
 
 
 ----- 
